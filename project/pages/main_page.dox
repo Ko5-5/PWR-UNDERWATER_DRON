@@ -1,0 +1,24 @@
+/*!
+    \mainpage DRON PODWODNY - Faza I Projektu
+
+    \author Michał Kos
+    \date 22.05.2020
+    \version 0.1
+
+    Przedstawiony program jest pierwsza faza projektu modelowania drona, poruszajacego sie pod woda, 
+    przy pomocy jezyka C++ oraz programu Gnuplot. 
+    Program jest moja realizacja I fazy projektu, w ktorej dron podwodny porusza sie na pustej scenie.
+    Wystepuje tylko tafla wody oraz dno, ktore ograniczaja jego ruch.
+
+    \section mozliwosci-dron Mozliwosci drona podwodnego
+
+    Obecna wersja programu pozwala na obrot drona wokol Osi Z jego ukladu lokalnego.
+    Mozliwy jest rowniez ruch na wprost pod zadanym katem wznoszenia lub opadania.
+
+    \section ograniczenia-ruchu Ograniczenia ruchu
+
+    Program ma wbudowane ograniczenie ruchu drona w osi Z.
+    Dron nie moze wzniesc sie wyzej niz wysokosc tafli wody, a
+    w momencie zetkniecia z dnem, program informuje uzytkownika o kolizji i konczy swoje dzialanie.
+
+*/

@@ -1,0 +1,270 @@
+\hypertarget{class_wektor}{}\section{Dokumentacja szablonu klasy Wektor$<$ Type, Size $>$}
+\label{class_wektor}\index{Wektor$<$ Type, Size $>$@{Wektor$<$ Type, Size $>$}}
+
+
+Klasa modelujaca pojecie wektora przy pomocy tablicy jednowymiarowej, podstawa budowy pojecia macierzy i ukladu rownan.  
+
+
+
+
+{\ttfamily \#include $<$wektor.\+hh$>$}
+
+
+
+Diagram współpracy dla Wektor$<$ Type, Size $>$\+:
+% FIG 0
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_wektor_a824a25627a2da1a8d1addc1f9ffd5688}{Wektor} ()
+\begin{DoxyCompactList}\small\item\em Konstruktor tworzacy wektor wypelniony zerami. \end{DoxyCompactList}\item 
+Type \hyperlink{class_wektor_a82fc83547c00b3ccb3ef82d8dc39cfd1}{operator\mbox{[}$\,$\mbox{]}} (unsigned int pos) const
+\begin{DoxyCompactList}\small\item\em Przeciazenie \mbox{[}\mbox{]} ulatwiajace dostep do wektora. \end{DoxyCompactList}\item 
+Type \& \hyperlink{class_wektor_af2ba6d2ba38150a5e508e2871e18b80d}{operator\mbox{[}$\,$\mbox{]}} (unsigned int pos)
+\begin{DoxyCompactList}\small\item\em Przeciazenie const \mbox{[}\mbox{]} ulatwiajace dostep do wektora. \end{DoxyCompactList}\item 
+\hyperlink{class_wektor}{Wektor}$<$ Type, Size $>$ \hyperlink{class_wektor_ac7ea75dec9cca3926713d1fa0d76cd4f}{operator$\ast$} (const Type mnoz)
+\begin{DoxyCompactList}\small\item\em Przeciazenie operatora mnozenia wektora przez liczbe (liczba z prawej strony wektora) \end{DoxyCompactList}\item 
+\hyperlink{class_wektor}{Wektor}$<$ Type, Size $>$ \hyperlink{class_wektor_a3f2007dcd0270b8fe90e4e15704f34e6}{operator/} (const Type dziel)
+\begin{DoxyCompactList}\small\item\em Przeciazenie operatora dzielenie wektora przez liczbe. \end{DoxyCompactList}\item 
+\hyperlink{class_wektor}{Wektor}$<$ Type, Size $>$ \hyperlink{class_wektor_acfb2580d5149ebbb138b9a669b98c892}{operator+} (const \hyperlink{class_wektor}{Wektor}$<$ Type, Size $>$ \&Arg)
+\begin{DoxyCompactList}\small\item\em Przeciazenie operatora + dla dodawania wektorow. \end{DoxyCompactList}\item 
+\hyperlink{class_wektor}{Wektor}$<$ Type, Size $>$ \hyperlink{class_wektor_a8c00cfdd29bddc4115ba1285112bf62f}{operator-\/} (const \hyperlink{class_wektor}{Wektor}$<$ Type, Size $>$ \&Arg) const
+\begin{DoxyCompactList}\small\item\em Przeciazenie operatora -\/ dla odejmowania wektorow. \end{DoxyCompactList}\item 
+Type \hyperlink{class_wektor_ab786f148ed27e5af9cb64fbc1efcc8d0}{operator$\ast$} (const \hyperlink{class_wektor}{Wektor}$<$ Type, Size $>$ \&Arg)
+\begin{DoxyCompactList}\small\item\em Przeciazenie operatora $\ast$ dla mnozenia wektorow. \end{DoxyCompactList}\item 
+Type \hyperlink{class_wektor_a7a7ef7322f231052fc83b2b4b1954399}{dlug\+\_\+wek} ()
+\begin{DoxyCompactList}\small\item\em Realizuje wyliczenie dlugosci wektora dla typu double. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+Type \hyperlink{class_wektor_ab2e838853fc88319f5eb21e35490b174}{tab\+\_\+wartosci} \mbox{[}Size\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+\subsubsection*{template$<$typename Type, int Size$>$\newline
+class Wektor$<$ Type, Size $>$}
+
+Klasa modelujaca pojecie wektora przy pomocy tablicy jednowymiarowej, podstawa budowy pojecia macierzy i ukladu rownan. 
+
+Definicja w linii 11 pliku wektor.\+hh.
+
+
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\mbox{\Hypertarget{class_wektor_a824a25627a2da1a8d1addc1f9ffd5688}\label{class_wektor_a824a25627a2da1a8d1addc1f9ffd5688}} 
+\index{Wektor@{Wektor}!Wektor@{Wektor}}
+\index{Wektor@{Wektor}!Wektor@{Wektor}}
+\subsubsection{\texorpdfstring{Wektor()}{Wektor()}}
+{\footnotesize\ttfamily template$<$typename Type, int Size$>$ \\
+\hyperlink{class_wektor}{Wektor}$<$ Type, Size $>$\+::\hyperlink{class_wektor}{Wektor} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Konstruktor tworzacy wektor wypelniony zerami. 
+
+
+
+Definicja w linii 20 pliku wektor.\+hh.
+
+
+
+\subsection{Dokumentacja funkcji składowych}
+\mbox{\Hypertarget{class_wektor_a7a7ef7322f231052fc83b2b4b1954399}\label{class_wektor_a7a7ef7322f231052fc83b2b4b1954399}} 
+\index{Wektor@{Wektor}!dlug\+\_\+wek@{dlug\+\_\+wek}}
+\index{dlug\+\_\+wek@{dlug\+\_\+wek}!Wektor@{Wektor}}
+\subsubsection{\texorpdfstring{dlug\+\_\+wek()}{dlug\_wek()}}
+{\footnotesize\ttfamily template$<$typename Type, int Size$>$ \\
+Type \hyperlink{class_wektor}{Wektor}$<$ Type, Size $>$\+::dlug\+\_\+wek (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Realizuje wyliczenie dlugosci wektora dla typu double. 
+
+\begin{DoxyReturn}{Zwraca}
+Dlugosc wektora 
+\end{DoxyReturn}
+
+
+Definicja w linii 75 pliku wektor.\+hh.
+
+\mbox{\Hypertarget{class_wektor_ac7ea75dec9cca3926713d1fa0d76cd4f}\label{class_wektor_ac7ea75dec9cca3926713d1fa0d76cd4f}} 
+\index{Wektor@{Wektor}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Wektor@{Wektor}}
+\subsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Type, int Size$>$ \\
+\hyperlink{class_wektor}{Wektor}$<$ Type, Size $>$ \hyperlink{class_wektor}{Wektor}$<$ Type, Size $>$\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const Type}]{mnoz }\end{DoxyParamCaption})}
+
+
+
+Przeciazenie operatora mnozenia wektora przez liczbe (liczba z prawej strony wektora) 
+
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em mnoz} & -\/ liczba rzeczywista przez ktora bedzie mnozony wektor \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+\hyperlink{class_wektor}{Wektor} wynikowy operacji mnozenia 
+\end{DoxyReturn}
+
+
+Definicja w linii 82 pliku wektor.\+hh.
+
+\mbox{\Hypertarget{class_wektor_ab786f148ed27e5af9cb64fbc1efcc8d0}\label{class_wektor_ab786f148ed27e5af9cb64fbc1efcc8d0}} 
+\index{Wektor@{Wektor}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Wektor@{Wektor}}
+\subsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Type, int Size$>$ \\
+Type \hyperlink{class_wektor}{Wektor}$<$ Type, Size $>$\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const \hyperlink{class_wektor}{Wektor}$<$ Type, Size $>$ \&}]{Arg }\end{DoxyParamCaption})}
+
+
+
+Przeciazenie operatora $\ast$ dla mnozenia wektorow. 
+
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em Arg} & -\/ wektor \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+\hyperlink{class_wektor}{Wektor} wynikowy operacji mnozenia 
+\end{DoxyReturn}
+
+
+Definicja w linii 126 pliku wektor.\+hh.
+
+\mbox{\Hypertarget{class_wektor_acfb2580d5149ebbb138b9a669b98c892}\label{class_wektor_acfb2580d5149ebbb138b9a669b98c892}} 
+\index{Wektor@{Wektor}!operator+@{operator+}}
+\index{operator+@{operator+}!Wektor@{Wektor}}
+\subsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily template$<$typename Type, int Size$>$ \\
+\hyperlink{class_wektor}{Wektor}$<$ Type, Size $>$ \hyperlink{class_wektor}{Wektor}$<$ Type, Size $>$\+::operator+ (\begin{DoxyParamCaption}\item[{const \hyperlink{class_wektor}{Wektor}$<$ Type, Size $>$ \&}]{Arg }\end{DoxyParamCaption})}
+
+
+
+Przeciazenie operatora + dla dodawania wektorow. 
+
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em Arg} & -\/ wektor \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+\hyperlink{class_wektor}{Wektor} wynikowy operacji dodawania 
+\end{DoxyReturn}
+
+
+Definicja w linii 104 pliku wektor.\+hh.
+
+\mbox{\Hypertarget{class_wektor_a8c00cfdd29bddc4115ba1285112bf62f}\label{class_wektor_a8c00cfdd29bddc4115ba1285112bf62f}} 
+\index{Wektor@{Wektor}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Wektor@{Wektor}}
+\subsubsection{\texorpdfstring{operator-\/()}{operator-()}}
+{\footnotesize\ttfamily template$<$typename Type, int Size$>$ \\
+\hyperlink{class_wektor}{Wektor}$<$ Type, Size $>$ \hyperlink{class_wektor}{Wektor}$<$ Type, Size $>$\+::operator-\/ (\begin{DoxyParamCaption}\item[{const \hyperlink{class_wektor}{Wektor}$<$ Type, Size $>$ \&}]{Arg }\end{DoxyParamCaption}) const}
+
+
+
+Przeciazenie operatora -\/ dla odejmowania wektorow. 
+
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em Arg} & -\/ wektor \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+\hyperlink{class_wektor}{Wektor} wynikowy operacji odejmowania 
+\end{DoxyReturn}
+
+
+Definicja w linii 115 pliku wektor.\+hh.
+
+\mbox{\Hypertarget{class_wektor_a3f2007dcd0270b8fe90e4e15704f34e6}\label{class_wektor_a3f2007dcd0270b8fe90e4e15704f34e6}} 
+\index{Wektor@{Wektor}!operator/@{operator/}}
+\index{operator/@{operator/}!Wektor@{Wektor}}
+\subsubsection{\texorpdfstring{operator/()}{operator/()}}
+{\footnotesize\ttfamily template$<$typename Type, int Size$>$ \\
+\hyperlink{class_wektor}{Wektor}$<$ Type, Size $>$ \hyperlink{class_wektor}{Wektor}$<$ Type, Size $>$\+::operator/ (\begin{DoxyParamCaption}\item[{const Type}]{dziel }\end{DoxyParamCaption})}
+
+
+
+Przeciazenie operatora dzielenie wektora przez liczbe. 
+
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em dziel} & -\/ liczba rzeczywista przez ktora bedzie dzielony wektor \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+\hyperlink{class_wektor}{Wektor} wynikowy operacji dzielenia 
+\end{DoxyReturn}
+
+
+Definicja w linii 93 pliku wektor.\+hh.
+
+\mbox{\Hypertarget{class_wektor_a82fc83547c00b3ccb3ef82d8dc39cfd1}\label{class_wektor_a82fc83547c00b3ccb3ef82d8dc39cfd1}} 
+\index{Wektor@{Wektor}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!Wektor@{Wektor}}
+\subsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Type, int Size$>$ \\
+Type \hyperlink{class_wektor}{Wektor}$<$ Type, Size $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{unsigned int}]{pos }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Przeciazenie \mbox{[}\mbox{]} ulatwiajace dostep do wektora. 
+
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em pos} & -\/ parametr przeciazenia \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Wartosc z wektora 
+\end{DoxyReturn}
+
+
+Definicja w linii 27 pliku wektor.\+hh.
+
+\mbox{\Hypertarget{class_wektor_af2ba6d2ba38150a5e508e2871e18b80d}\label{class_wektor_af2ba6d2ba38150a5e508e2871e18b80d}} 
+\index{Wektor@{Wektor}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!Wektor@{Wektor}}
+\subsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Type, int Size$>$ \\
+Type\& \hyperlink{class_wektor}{Wektor}$<$ Type, Size $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{unsigned int}]{pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Przeciazenie const \mbox{[}\mbox{]} ulatwiajace dostep do wektora. 
+
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em pos} & -\/ parametr przeciazenia \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Wartosc z wektora 
+\end{DoxyReturn}
+
+
+Definicja w linii 34 pliku wektor.\+hh.
+
+
+
+\subsection{Dokumentacja atrybutów składowych}
+\mbox{\Hypertarget{class_wektor_ab2e838853fc88319f5eb21e35490b174}\label{class_wektor_ab2e838853fc88319f5eb21e35490b174}} 
+\index{Wektor@{Wektor}!tab\+\_\+wartosci@{tab\+\_\+wartosci}}
+\index{tab\+\_\+wartosci@{tab\+\_\+wartosci}!Wektor@{Wektor}}
+\subsubsection{\texorpdfstring{tab\+\_\+wartosci}{tab\_wartosci}}
+{\footnotesize\ttfamily template$<$typename Type, int Size$>$ \\
+Type \hyperlink{class_wektor}{Wektor}$<$ Type, Size $>$\+::tab\+\_\+wartosci\mbox{[}Size\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definicja w linii 14 pliku wektor.\+hh.
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z pliku\+:\begin{DoxyCompactItemize}
+\item 
+/home/michal/\+Documents/\+G\+I\+T\+\_\+\+R\+E\+P\+O\+S/\+I\+I-\/\+S\+E\+M-\/\+K\+P\+O/4\+: Dron podwodny/project/inc/\hyperlink{wektor_8hh}{wektor.\+hh}\end{DoxyCompactItemize}

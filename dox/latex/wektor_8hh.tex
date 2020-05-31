@@ -1,0 +1,73 @@
+\hypertarget{wektor_8hh}{}\section{Dokumentacja pliku /home/michal/\+Documents/\+G\+I\+T\+\_\+\+R\+E\+P\+O\+S/\+I\+I-\/\+S\+E\+M-\/\+K\+P\+O/4\+: Dron podwodny/project/inc/wektor.hh}
+\label{wektor_8hh}\index{/home/michal/\+Documents/\+G\+I\+T\+\_\+\+R\+E\+P\+O\+S/\+I\+I-\/\+S\+E\+M-\/\+K\+P\+O/4\+: Dron podwodny/project/inc/wektor.\+hh@{/home/michal/\+Documents/\+G\+I\+T\+\_\+\+R\+E\+P\+O\+S/\+I\+I-\/\+S\+E\+M-\/\+K\+P\+O/4\+: Dron podwodny/project/inc/wektor.\+hh}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$type\+\_\+traits$>$}\newline
+Wykres zależności załączania dla wektor.\+hh\+:
+% FIG 0
+Ten wykres pokazuje, które pliki bezpośrednio lub pośrednio załączają ten plik\+:
+% FIG 1
+\subsection*{Komponenty}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_wektor}{Wektor$<$ Type, Size $>$}
+\begin{DoxyCompactList}\small\item\em Klasa modelujaca pojecie wektora przy pomocy tablicy jednowymiarowej, podstawa budowy pojecia macierzy i ukladu rownan. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Type , int Size$>$ }\\std\+::ostream \& \hyperlink{wektor_8hh_aed5b68ac0443076ac8f2479d24ce5b67}{operator$<$$<$} (std\+::ostream \&strm, const \hyperlink{class_wektor}{Wektor}$<$ Type, Size $>$ \&Wek)
+\begin{DoxyCompactList}\small\item\em Przeciazenie wypisania wektora na strumien. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Type , int Size$>$ }\\std\+::istream \& \hyperlink{wektor_8hh_ac21abfcf8fff6d5e7e32b0d891533f2c}{operator$>$$>$} (std\+::istream \&strm, \hyperlink{class_wektor}{Wektor}$<$ Type, Size $>$ \&Wek)
+\begin{DoxyCompactList}\small\item\em Przeciazenie realizujace wczytanie wektora z strumienia (utworzone w celu testow) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Dokumentacja funkcji}
+\mbox{\Hypertarget{wektor_8hh_aed5b68ac0443076ac8f2479d24ce5b67}\label{wektor_8hh_aed5b68ac0443076ac8f2479d24ce5b67}} 
+\index{wektor.\+hh@{wektor.\+hh}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!wektor.\+hh@{wektor.\+hh}}
+\subsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily template$<$typename Type , int Size$>$ \\
+std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{strm,  }\item[{const \hyperlink{class_wektor}{Wektor}$<$ Type, Size $>$ \&}]{Wek }\end{DoxyParamCaption})}
+
+
+
+Przeciazenie wypisania wektora na strumien. 
+
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em strm} & -\/ strumien wyjsciowy \\
+\hline
+\mbox{\tt in}  & {\em Wek} & -\/ wektor ktory zostanie wypisany \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Strumien wypisania 
+\end{DoxyReturn}
+
+
+Definicja w linii 143 pliku wektor.\+hh.
+
+\mbox{\Hypertarget{wektor_8hh_ac21abfcf8fff6d5e7e32b0d891533f2c}\label{wektor_8hh_ac21abfcf8fff6d5e7e32b0d891533f2c}} 
+\index{wektor.\+hh@{wektor.\+hh}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!wektor.\+hh@{wektor.\+hh}}
+\subsubsection{\texorpdfstring{operator$>$$>$()}{operator>>()}}
+{\footnotesize\ttfamily template$<$typename Type , int Size$>$ \\
+std\+::istream\& operator$>$$>$ (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{strm,  }\item[{\hyperlink{class_wektor}{Wektor}$<$ Type, Size $>$ \&}]{Wek }\end{DoxyParamCaption})}
+
+
+
+Przeciazenie realizujace wczytanie wektora z strumienia (utworzone w celu testow) 
+
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em strm} & -\/ strumien wejciowy \\
+\hline
+\mbox{\tt in}  & {\em Wek} & -\/ wektor do ktorego nastapi wczytanie \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Strumien wczytania 
+\end{DoxyReturn}
+
+
+Definicja w linii 159 pliku wektor.\+hh.
+

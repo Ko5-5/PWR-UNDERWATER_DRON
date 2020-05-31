@@ -1,0 +1,36 @@
+digraph "/home/michal/Documents/GIT_REPOS/II-SEM-KPO/4: Dron podwodny/project/inc/powierzchnia.hh"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node7 [label="/home/michal/Documents\l/GIT_REPOS/II-SEM-KPO\l/4: Dron podwodny/project\l/inc/powierzchnia.hh",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node7 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="/home/michal/Documents\l/GIT_REPOS/II-SEM-KPO\l/4: Dron podwodny/project\l/inc/dno.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dno_8hh.html"];
+  Node8 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="/home/michal/Documents\l/GIT_REPOS/II-SEM-KPO\l/4: Dron podwodny/project\l/inc/scena.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$scena_8hh.html"];
+  Node9 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="/home/michal/Documents\l/GIT_REPOS/II-SEM-KPO\l/4: Dron podwodny/project\l/inc/menu.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$menu_8hh.html"];
+  Node10 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="/home/michal/Documents\l/GIT_REPOS/II-SEM-KPO\l/4: Dron podwodny/project\l/src/main.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$main_8cpp.html"];
+  Node10 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node12 [label="/home/michal/Documents\l/GIT_REPOS/II-SEM-KPO\l/4: Dron podwodny/project\l/src/menu.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$menu_8cpp.html"];
+  Node9 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node13 [label="/home/michal/Documents\l/GIT_REPOS/II-SEM-KPO\l/4: Dron podwodny/project\l/src/scena.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$scena_8cpp.html"];
+  Node8 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node14 [label="/home/michal/Documents\l/GIT_REPOS/II-SEM-KPO\l/4: Dron podwodny/project\l/src/dno.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dno_8cpp.html"];
+  Node7 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node15 [label="/home/michal/Documents\l/GIT_REPOS/II-SEM-KPO\l/4: Dron podwodny/project\l/inc/figura_geo.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$figura__geo_8hh.html"];
+  Node15 -> Node16 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node16 [label="/home/michal/Documents\l/GIT_REPOS/II-SEM-KPO\l/4: Dron podwodny/project\l/inc/dron.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dron_8hh.html"];
+  Node16 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node16 -> Node17 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node17 [label="/home/michal/Documents\l/GIT_REPOS/II-SEM-KPO\l/4: Dron podwodny/project\l/src/dron.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dron_8cpp.html"];
+  Node15 -> Node18 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node18 [label="/home/michal/Documents\l/GIT_REPOS/II-SEM-KPO\l/4: Dron podwodny/project\l/src/figura_geo.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$figura__geo_8cpp.html"];
+  Node7 -> Node19 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node19 [label="/home/michal/Documents\l/GIT_REPOS/II-SEM-KPO\l/4: Dron podwodny/project\l/inc/woda.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$woda_8hh.html"];
+  Node19 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node19 -> Node20 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node20 [label="/home/michal/Documents\l/GIT_REPOS/II-SEM-KPO\l/4: Dron podwodny/project\l/src/woda.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$woda_8cpp.html"];
+  Node7 -> Node21 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node21 [label="/home/michal/Documents\l/GIT_REPOS/II-SEM-KPO\l/4: Dron podwodny/project\l/src/powierzchnia.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$powierzchnia_8cpp.html"];
+}

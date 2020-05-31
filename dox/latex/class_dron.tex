@@ -1,0 +1,211 @@
+\hypertarget{class_dron}{}\section{Dokumentacja klasy Dron}
+\label{class_dron}\index{Dron@{Dron}}
+
+
+Klasa pochodna figury geometrycznej realizujaca modelowanie drona.  
+
+
+
+
+{\ttfamily \#include $<$dron.\+hh$>$}
+
+
+
+Diagram dziedziczenia dla Dron
+% FIG 0
+
+
+Diagram współpracy dla Dron\+:
+% FIG 1
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_dron_a2a8365d22ed2630eec325588f0a99ae9}{Dron} (std\+::ifstream \&plik\+\_\+wej)
+\begin{DoxyCompactList}\small\item\em Konstruktor parametryczny Drona, bierze plik z wsp lokalnymi i zapisuje do tablicy lokalnej. \end{DoxyCompactList}\item 
+double \& \hyperlink{class_dron_a1f9510601178cdc3aa0db072fe2e6ce2}{operator\mbox{[}$\,$\mbox{]}} (unsigned int \hyperlink{class_powierzchnia_a9ec2cb128f77750a89995e8065fee3c4}{size})
+\begin{DoxyCompactList}\small\item\em Przeciazenie operatora dostepu do translacji drona. \end{DoxyCompactList}\item 
+double \hyperlink{class_dron_a95002d53f1714a63b5ff6f272e5ef462}{operator\mbox{[}$\,$\mbox{]}} (unsigned int \hyperlink{class_powierzchnia_a9ec2cb128f77750a89995e8065fee3c4}{size}) const
+\begin{DoxyCompactList}\small\item\em Przeciazenie operatora dostepu do translacji drona. \end{DoxyCompactList}\item 
+void \hyperlink{class_dron_a8deb760c65a10cf414b77602d11e0c66}{translacja\+\_\+glob} ()
+\begin{DoxyCompactList}\small\item\em Realizuje translacje ukladu lokalnego do globalnego. \end{DoxyCompactList}\item 
+void \hyperlink{class_dron_aa46e419441838e4bdd770396a45cc437}{ruch\+\_\+przod\+\_\+kat} (int il\+\_\+krok, double kat)
+\begin{DoxyCompactList}\small\item\em Realizuje zapis ruchu drona do przodu. \end{DoxyCompactList}\item 
+void \hyperlink{class_dron_aa2c1af271cff349fbb66b0e88d6b367f}{obrot\+\_\+os\+\_\+kat} (int os, double kat)
+\begin{DoxyCompactList}\small\item\em Realizuje obrot drona wokol osi. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_wektor3_d}{Wektor3D} \hyperlink{class_dron_a1b37296f6c286bde4e20c35d77bd03f6}{translacja} = \hyperlink{class_wektor3_d}{Wektor3D}(35,35,-\/50)
+\begin{DoxyCompactList}\small\item\em Pole translacji z ukladu lokalnego do globalnego. \end{DoxyCompactList}\item 
+\hyperlink{class_wektor3_d}{Wektor3D} \hyperlink{class_dron_a0d66fa60de16c265e4d008ab52cd5ab6}{obrot\+\_\+kat} = \hyperlink{class_wektor3_d}{Wektor3D}(0,0,0)
+\begin{DoxyCompactList}\small\item\em Pole obrotu drona wzgledem oryginalnego polozenia. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Dodatkowe Dziedziczone Składowe}
+
+
+\subsection{Opis szczegółowy}
+Klasa pochodna figury geometrycznej realizujaca modelowanie drona. 
+
+Definicja w linii 11 pliku dron.\+hh.
+
+
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\mbox{\Hypertarget{class_dron_a2a8365d22ed2630eec325588f0a99ae9}\label{class_dron_a2a8365d22ed2630eec325588f0a99ae9}} 
+\index{Dron@{Dron}!Dron@{Dron}}
+\index{Dron@{Dron}!Dron@{Dron}}
+\subsubsection{\texorpdfstring{Dron()}{Dron()}}
+{\footnotesize\ttfamily Dron\+::\+Dron (\begin{DoxyParamCaption}\item[{std\+::ifstream \&}]{plik\+\_\+wej }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Konstruktor parametryczny Drona, bierze plik z wsp lokalnymi i zapisuje do tablicy lokalnej. 
+
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em plik\+\_\+wej} & -\/ strumien plikowy wczytywania drona w ukladzie lokalnym \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 28 pliku dron.\+hh.
+
+
+
+\subsection{Dokumentacja funkcji składowych}
+\mbox{\Hypertarget{class_dron_aa2c1af271cff349fbb66b0e88d6b367f}\label{class_dron_aa2c1af271cff349fbb66b0e88d6b367f}} 
+\index{Dron@{Dron}!obrot\+\_\+os\+\_\+kat@{obrot\+\_\+os\+\_\+kat}}
+\index{obrot\+\_\+os\+\_\+kat@{obrot\+\_\+os\+\_\+kat}!Dron@{Dron}}
+\subsubsection{\texorpdfstring{obrot\+\_\+os\+\_\+kat()}{obrot\_os\_kat()}}
+{\footnotesize\ttfamily void Dron\+::obrot\+\_\+os\+\_\+kat (\begin{DoxyParamCaption}\item[{int}]{os,  }\item[{double}]{kat }\end{DoxyParamCaption})}
+
+
+
+Realizuje obrot drona wokol osi. 
+
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em os} & -\/ os obrotu \\
+\hline
+\mbox{\tt in}  & {\em kat} & -\/ kat obrotu \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 83 pliku dron.\+cpp.
+
+\mbox{\Hypertarget{class_dron_a1f9510601178cdc3aa0db072fe2e6ce2}\label{class_dron_a1f9510601178cdc3aa0db072fe2e6ce2}} 
+\index{Dron@{Dron}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!Dron@{Dron}}
+\subsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily double\& Dron\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{unsigned int}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Przeciazenie operatora dostepu do translacji drona. 
+
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em size} & -\/ zadane pole \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Zadane pole translacji drona 
+\end{DoxyReturn}
+
+
+Definicja w linii 46 pliku dron.\+hh.
+
+\mbox{\Hypertarget{class_dron_a95002d53f1714a63b5ff6f272e5ef462}\label{class_dron_a95002d53f1714a63b5ff6f272e5ef462}} 
+\index{Dron@{Dron}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!Dron@{Dron}}
+\subsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily double Dron\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{unsigned int}]{size }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Przeciazenie operatora dostepu do translacji drona. 
+
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em size} & -\/ zadane pole \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Zadane pole translacji drona 
+\end{DoxyReturn}
+
+
+Definicja w linii 53 pliku dron.\+hh.
+
+\mbox{\Hypertarget{class_dron_aa46e419441838e4bdd770396a45cc437}\label{class_dron_aa46e419441838e4bdd770396a45cc437}} 
+\index{Dron@{Dron}!ruch\+\_\+przod\+\_\+kat@{ruch\+\_\+przod\+\_\+kat}}
+\index{ruch\+\_\+przod\+\_\+kat@{ruch\+\_\+przod\+\_\+kat}!Dron@{Dron}}
+\subsubsection{\texorpdfstring{ruch\+\_\+przod\+\_\+kat()}{ruch\_przod\_kat()}}
+{\footnotesize\ttfamily void Dron\+::ruch\+\_\+przod\+\_\+kat (\begin{DoxyParamCaption}\item[{int}]{il\+\_\+krok,  }\item[{double}]{kat }\end{DoxyParamCaption})}
+
+
+
+Realizuje zapis ruchu drona do przodu. 
+
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em il\+\_\+krok} & -\/ wielkosci ruchu \\
+\hline
+\mbox{\tt in}  & {\em kat} & -\/ kat wznoszenia \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 3 pliku dron.\+cpp.
+
+\mbox{\Hypertarget{class_dron_a8deb760c65a10cf414b77602d11e0c66}\label{class_dron_a8deb760c65a10cf414b77602d11e0c66}} 
+\index{Dron@{Dron}!translacja\+\_\+glob@{translacja\+\_\+glob}}
+\index{translacja\+\_\+glob@{translacja\+\_\+glob}!Dron@{Dron}}
+\subsubsection{\texorpdfstring{translacja\+\_\+glob()}{translacja\_glob()}}
+{\footnotesize\ttfamily void Dron\+::translacja\+\_\+glob (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Realizuje translacje ukladu lokalnego do globalnego. 
+
+
+
+Definicja w linii 49 pliku dron.\+cpp.
+
+
+
+\subsection{Dokumentacja atrybutów składowych}
+\mbox{\Hypertarget{class_dron_a0d66fa60de16c265e4d008ab52cd5ab6}\label{class_dron_a0d66fa60de16c265e4d008ab52cd5ab6}} 
+\index{Dron@{Dron}!obrot\+\_\+kat@{obrot\+\_\+kat}}
+\index{obrot\+\_\+kat@{obrot\+\_\+kat}!Dron@{Dron}}
+\subsubsection{\texorpdfstring{obrot\+\_\+kat}{obrot\_kat}}
+{\footnotesize\ttfamily \hyperlink{class_wektor3_d}{Wektor3D} Dron\+::obrot\+\_\+kat = \hyperlink{class_wektor3_d}{Wektor3D}(0,0,0)\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Pole obrotu drona wzgledem oryginalnego polozenia. 
+
+
+
+Definicja w linii 21 pliku dron.\+hh.
+
+\mbox{\Hypertarget{class_dron_a1b37296f6c286bde4e20c35d77bd03f6}\label{class_dron_a1b37296f6c286bde4e20c35d77bd03f6}} 
+\index{Dron@{Dron}!translacja@{translacja}}
+\index{translacja@{translacja}!Dron@{Dron}}
+\subsubsection{\texorpdfstring{translacja}{translacja}}
+{\footnotesize\ttfamily \hyperlink{class_wektor3_d}{Wektor3D} Dron\+::translacja = \hyperlink{class_wektor3_d}{Wektor3D}(35,35,-\/50)\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Pole translacji z ukladu lokalnego do globalnego. 
+
+
+
+Definicja w linii 17 pliku dron.\+hh.
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+/home/michal/\+Documents/\+G\+I\+T\+\_\+\+R\+E\+P\+O\+S/\+I\+I-\/\+S\+E\+M-\/\+K\+P\+O/4\+: Dron podwodny/project/inc/\hyperlink{dron_8hh}{dron.\+hh}\item 
+/home/michal/\+Documents/\+G\+I\+T\+\_\+\+R\+E\+P\+O\+S/\+I\+I-\/\+S\+E\+M-\/\+K\+P\+O/4\+: Dron podwodny/project/src/\hyperlink{dron_8cpp}{dron.\+cpp}\end{DoxyCompactItemize}

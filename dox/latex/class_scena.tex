@@ -1,0 +1,134 @@
+\hypertarget{class_scena}{}\section{Dokumentacja klasy Scena}
+\label{class_scena}\index{Scena@{Scena}}
+
+
+Klasa realizujaca pojecie sceny, zawiera w sobie \hyperlink{class_dno}{Dno} oraz Wode.  
+
+
+
+
+{\ttfamily \#include $<$scena.\+hh$>$}
+
+
+
+Diagram współpracy dla Scena\+:
+% FIG 0
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_scena_aa25d8e08524292a7305c930e2729a184}{Scena} (int x\+\_\+0, int x, int y\+\_\+0, int y)
+\begin{DoxyCompactList}\small\item\em Konstruktor parametryczny Sceny. \end{DoxyCompactList}\item 
+\hyperlink{class_scena_ad882b3d3c934c64c5e90a63246a47943}{$\sim$\+Scena} ()
+\begin{DoxyCompactList}\small\item\em Destruktor sceny. \end{DoxyCompactList}\item 
+bool \hyperlink{class_scena_a76bbf6eceb1bade5fd2acbdd41fa229f}{zapisz\+\_\+plik} (std\+::ofstream \&plik\+\_\+wyj)
+\begin{DoxyCompactList}\small\item\em Realizuje zapis sceny do podanego strumienia plikowego. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_dno}{Dno} $\ast$ \hyperlink{class_scena_aa4deb37aaebf4a31512a4b12b8416fbb}{dno\+\_\+wartosci}
+\item 
+\hyperlink{class_woda}{Woda} $\ast$ \hyperlink{class_scena_ad2f6b4af02a7c8f10dabb005aae33f73}{woda\+\_\+wartosci}
+\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+Klasa realizujaca pojecie sceny, zawiera w sobie \hyperlink{class_dno}{Dno} oraz Wode. 
+
+Definicja w linii 11 pliku scena.\+hh.
+
+
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\mbox{\Hypertarget{class_scena_aa25d8e08524292a7305c930e2729a184}\label{class_scena_aa25d8e08524292a7305c930e2729a184}} 
+\index{Scena@{Scena}!Scena@{Scena}}
+\index{Scena@{Scena}!Scena@{Scena}}
+\subsubsection{\texorpdfstring{Scena()}{Scena()}}
+{\footnotesize\ttfamily Scena\+::\+Scena (\begin{DoxyParamCaption}\item[{int}]{x\+\_\+0,  }\item[{int}]{x,  }\item[{int}]{y\+\_\+0,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Konstruktor parametryczny Sceny. 
+
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em x\+\_\+0} & -\/ poczatek zakresu x \\
+\hline
+\mbox{\tt in}  & {\em x} & -\/ koniec zakresu x \\
+\hline
+\mbox{\tt in}  & {\em y\+\_\+0} & -\/ poczatek zakresu y \\
+\hline
+\mbox{\tt in}  & {\em y} & -\/ koniec zakresu y \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 25 pliku scena.\+hh.
+
+\mbox{\Hypertarget{class_scena_ad882b3d3c934c64c5e90a63246a47943}\label{class_scena_ad882b3d3c934c64c5e90a63246a47943}} 
+\index{Scena@{Scena}!````~Scena@{$\sim$\+Scena}}
+\index{````~Scena@{$\sim$\+Scena}!Scena@{Scena}}
+\subsubsection{\texorpdfstring{$\sim$\+Scena()}{~Scena()}}
+{\footnotesize\ttfamily Scena\+::$\sim$\+Scena (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destruktor sceny. 
+
+
+
+Definicja w linii 30 pliku scena.\+hh.
+
+
+
+\subsection{Dokumentacja funkcji składowych}
+\mbox{\Hypertarget{class_scena_a76bbf6eceb1bade5fd2acbdd41fa229f}\label{class_scena_a76bbf6eceb1bade5fd2acbdd41fa229f}} 
+\index{Scena@{Scena}!zapisz\+\_\+plik@{zapisz\+\_\+plik}}
+\index{zapisz\+\_\+plik@{zapisz\+\_\+plik}!Scena@{Scena}}
+\subsubsection{\texorpdfstring{zapisz\+\_\+plik()}{zapisz\_plik()}}
+{\footnotesize\ttfamily bool Scena\+::zapisz\+\_\+plik (\begin{DoxyParamCaption}\item[{std\+::ofstream \&}]{plik\+\_\+wyj }\end{DoxyParamCaption})}
+
+
+
+Realizuje zapis sceny do podanego strumienia plikowego. 
+
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em plik\+\_\+wyj} & -\/ strumien plikowy zapisu \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Wartosci logiczna bool powodzenia operacji zapisu do pliku 
+\end{DoxyReturn}
+
+
+Definicja w linii 3 pliku scena.\+cpp.
+
+
+
+\subsection{Dokumentacja atrybutów składowych}
+\mbox{\Hypertarget{class_scena_aa4deb37aaebf4a31512a4b12b8416fbb}\label{class_scena_aa4deb37aaebf4a31512a4b12b8416fbb}} 
+\index{Scena@{Scena}!dno\+\_\+wartosci@{dno\+\_\+wartosci}}
+\index{dno\+\_\+wartosci@{dno\+\_\+wartosci}!Scena@{Scena}}
+\subsubsection{\texorpdfstring{dno\+\_\+wartosci}{dno\_wartosci}}
+{\footnotesize\ttfamily \hyperlink{class_dno}{Dno}$\ast$ Scena\+::dno\+\_\+wartosci\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definicja w linii 14 pliku scena.\+hh.
+
+\mbox{\Hypertarget{class_scena_ad2f6b4af02a7c8f10dabb005aae33f73}\label{class_scena_ad2f6b4af02a7c8f10dabb005aae33f73}} 
+\index{Scena@{Scena}!woda\+\_\+wartosci@{woda\+\_\+wartosci}}
+\index{woda\+\_\+wartosci@{woda\+\_\+wartosci}!Scena@{Scena}}
+\subsubsection{\texorpdfstring{woda\+\_\+wartosci}{woda\_wartosci}}
+{\footnotesize\ttfamily \hyperlink{class_woda}{Woda}$\ast$ Scena\+::woda\+\_\+wartosci\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definicja w linii 15 pliku scena.\+hh.
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+/home/michal/\+Documents/\+G\+I\+T\+\_\+\+R\+E\+P\+O\+S/\+I\+I-\/\+S\+E\+M-\/\+K\+P\+O/4\+: Dron podwodny/project/inc/\hyperlink{scena_8hh}{scena.\+hh}\item 
+/home/michal/\+Documents/\+G\+I\+T\+\_\+\+R\+E\+P\+O\+S/\+I\+I-\/\+S\+E\+M-\/\+K\+P\+O/4\+: Dron podwodny/project/src/\hyperlink{scena_8cpp}{scena.\+cpp}\end{DoxyCompactItemize}

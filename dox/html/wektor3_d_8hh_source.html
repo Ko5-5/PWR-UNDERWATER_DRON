@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Dron podwodny: Plik źródłowy /home/michal/Documents/GIT_REPOS/II-SEM-KPO/4: Dron podwodny/project/inc/wektor3D.hh</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Dron podwodny
+   &#160;<span id="projectnumber">0.1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('wektor3_d_8hh_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">wektor3D.hh</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="wektor3_d_8hh.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef WEKTOR3D_HH</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define WEKTOR3D_HH</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="stale__wartosci_8h.html">stale_wartosci.h</a>&quot;</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="wektor_8hh.html">wektor.hh</a>&quot;</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div><div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_wektor3_d.html">   11</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_wektor3_d.html">Wektor3D</a>: <span class="keyword">public</span> <a class="code" href="class_wektor.html">Wektor</a>&lt;double,3&gt;</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keyword">private</span>:</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div><div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_wektor3_d.html#a0e760007c5a0cb91ddc981879191212a">   18</a></span>&#160;    <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="class_wektor3_d.html#a0e760007c5a0cb91ddc981879191212a">lacznie_wek</a>;</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div><div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_wektor3_d.html#a3977f6ad24d6653c8b22feaf69bc3ed2">   23</a></span>&#160;    <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="class_wektor3_d.html#a3977f6ad24d6653c8b22feaf69bc3ed2">zniszcz_wek</a>;</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keyword">public</span>:</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div><div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="class_wektor3_d.html#adaa56ab5d4c5a31d3e42909b2f3a07af">   30</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_wektor3_d.html#adaa56ab5d4c5a31d3e42909b2f3a07af">Pokaz_Wek_lacznie</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> this-&gt;<a class="code" href="class_wektor3_d.html#a0e760007c5a0cb91ddc981879191212a">lacznie_wek</a>;}</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div><div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="class_wektor3_d.html#a1790e3cb0d7ab755639e901c3065831a">   35</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_wektor3_d.html#a1790e3cb0d7ab755639e901c3065831a">Pokaz_wek_teraz</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> this-&gt;lacznie_wek - this-&gt;<a class="code" href="class_wektor3_d.html#a3977f6ad24d6653c8b22feaf69bc3ed2">zniszcz_wek</a>;}</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div><div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="class_wektor3_d.html#a7c48a57fd36c0af29e26c825f90a973f">   40</a></span>&#160;    <a class="code" href="class_wektor3_d.html#a7c48a57fd36c0af29e26c825f90a973f">Wektor3D</a>() {lacznie_wek++;}</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div><div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="class_wektor3_d.html#af82ae24a30f6c4391edd67647348ac04">   45</a></span>&#160;    <a class="code" href="class_wektor3_d.html#af82ae24a30f6c4391edd67647348ac04">~Wektor3D</a>() {zniszcz_wek++;}</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div><div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="class_wektor3_d.html#a0defc77d38b1c9f9b1063d2b3459de5c">   53</a></span>&#160;    <a class="code" href="class_wektor3_d.html#a0defc77d38b1c9f9b1063d2b3459de5c">Wektor3D</a>(<span class="keywordtype">double</span> x, <span class="keywordtype">double</span> y, <span class="keywordtype">double</span> z) {(*this)[<a class="code" href="stale__wartosci_8h.html#a207fd5507206d307cd63f95374fcd00d">X</a>]=x; (*this)[<a class="code" href="stale__wartosci_8h.html#a798e4073d613ca5ba9618e1b3253df14">Y</a>]=y; (*this)[<a class="code" href="stale__wartosci_8h.html#a51591cf51bdd6c1f6015532422e7770e">Z</a>]=z; lacznie_wek++;}</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div><div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="class_wektor3_d.html#aadf1182f4aad14b9e58eda2dee7e9072">   59</a></span>&#160;    <a class="code" href="class_wektor3_d.html#aadf1182f4aad14b9e58eda2dee7e9072">Wektor3D</a>(<a class="code" href="class_wektor3_d.html">Wektor3D</a> &amp; wek) {(*this)=wek; lacznie_wek++;}</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div><div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="class_wektor3_d.html#a9541f7f55cdf5e8db8c811b65550c3c4">   65</a></span>&#160;    <a class="code" href="class_wektor3_d.html#a9541f7f55cdf5e8db8c811b65550c3c4">Wektor3D</a>(<span class="keyword">const</span> <a class="code" href="class_wektor3_d.html">Wektor3D</a> &amp; wek) {(*this)=wek; lacznie_wek++;}</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div><div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="class_wektor3_d.html#a8e06c5739cc4ec3fe97177269872efd2">   71</a></span>&#160;    <a class="code" href="class_wektor3_d.html#a8e06c5739cc4ec3fe97177269872efd2">Wektor3D</a>(<span class="keyword">const</span> <a class="code" href="class_wektor.html">Wektor&lt;double,3&gt;</a> &amp; wek) {(*this)=wek; lacznie_wek++;}</div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <a class="code" href="class_wektor3_d.html">Wektor3D</a> <a class="code" href="class_wektor3_d.html#a73141c168ee82a84e4522d12aae25bf1">operator + </a>(<a class="code" href="class_wektor3_d.html">Wektor3D</a> wek);</div><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;};</div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="preprocessor">#endif</span></div><div class="ttc" id="stale__wartosci_8h_html_a207fd5507206d307cd63f95374fcd00d"><div class="ttname"><a href="stale__wartosci_8h.html#a207fd5507206d307cd63f95374fcd00d">X</a></div><div class="ttdeci">#define X</div><div class="ttdef"><b>Definition:</b> <a href="stale__wartosci_8h_source.html#l00006">stale_wartosci.h:6</a></div></div>
+<div class="ttc" id="class_wektor3_d_html_aadf1182f4aad14b9e58eda2dee7e9072"><div class="ttname"><a href="class_wektor3_d.html#aadf1182f4aad14b9e58eda2dee7e9072">Wektor3D::Wektor3D</a></div><div class="ttdeci">Wektor3D(Wektor3D &amp;wek)</div><div class="ttdoc">Konstruktor kopiujacy wektora 3D, potrzebny do vector&lt;&gt;.push_back. </div><div class="ttdef"><b>Definition:</b> <a href="wektor3_d_8hh_source.html#l00059">wektor3D.hh:59</a></div></div>
+<div class="ttc" id="class_wektor3_d_html_a73141c168ee82a84e4522d12aae25bf1"><div class="ttname"><a href="class_wektor3_d.html#a73141c168ee82a84e4522d12aae25bf1">Wektor3D::operator+</a></div><div class="ttdeci">Wektor3D operator+(Wektor3D wek)</div><div class="ttdoc">Przeciazenie operatora dodawania wektorow 3D. </div><div class="ttdef"><b>Definition:</b> <a href="wektor3_d_8cpp_source.html#l00006">wektor3D.cpp:6</a></div></div>
+<div class="ttc" id="class_wektor3_d_html_adaa56ab5d4c5a31d3e42909b2f3a07af"><div class="ttname"><a href="class_wektor3_d.html#adaa56ab5d4c5a31d3e42909b2f3a07af">Wektor3D::Pokaz_Wek_lacznie</a></div><div class="ttdeci">int Pokaz_Wek_lacznie() const</div><div class="ttdoc">Realizuje wypisanie pola statycznego ilosci utworzonych wektorow 3D. </div><div class="ttdef"><b>Definition:</b> <a href="wektor3_d_8hh_source.html#l00030">wektor3D.hh:30</a></div></div>
+<div class="ttc" id="stale__wartosci_8h_html_a798e4073d613ca5ba9618e1b3253df14"><div class="ttname"><a href="stale__wartosci_8h.html#a798e4073d613ca5ba9618e1b3253df14">Y</a></div><div class="ttdeci">#define Y</div><div class="ttdef"><b>Definition:</b> <a href="stale__wartosci_8h_source.html#l00007">stale_wartosci.h:7</a></div></div>
+<div class="ttc" id="stale__wartosci_8h_html_a51591cf51bdd6c1f6015532422e7770e"><div class="ttname"><a href="stale__wartosci_8h.html#a51591cf51bdd6c1f6015532422e7770e">Z</a></div><div class="ttdeci">#define Z</div><div class="ttdef"><b>Definition:</b> <a href="stale__wartosci_8h_source.html#l00008">stale_wartosci.h:8</a></div></div>
+<div class="ttc" id="class_wektor3_d_html_a0e760007c5a0cb91ddc981879191212a"><div class="ttname"><a href="class_wektor3_d.html#a0e760007c5a0cb91ddc981879191212a">Wektor3D::lacznie_wek</a></div><div class="ttdeci">static int lacznie_wek</div><div class="ttdoc">Pole statyczne zawierajca ogolna ilosc utworzonych wektorow 3D. </div><div class="ttdef"><b>Definition:</b> <a href="wektor3_d_8hh_source.html#l00018">wektor3D.hh:18</a></div></div>
+<div class="ttc" id="class_wektor3_d_html_a3977f6ad24d6653c8b22feaf69bc3ed2"><div class="ttname"><a href="class_wektor3_d.html#a3977f6ad24d6653c8b22feaf69bc3ed2">Wektor3D::zniszcz_wek</a></div><div class="ttdeci">static int zniszcz_wek</div><div class="ttdoc">Pole statyczne zawierajca ogolna ilosc zniszczonych wektorow 3D. </div><div class="ttdef"><b>Definition:</b> <a href="wektor3_d_8hh_source.html#l00023">wektor3D.hh:23</a></div></div>
+<div class="ttc" id="class_wektor3_d_html_a9541f7f55cdf5e8db8c811b65550c3c4"><div class="ttname"><a href="class_wektor3_d.html#a9541f7f55cdf5e8db8c811b65550c3c4">Wektor3D::Wektor3D</a></div><div class="ttdeci">Wektor3D(const Wektor3D &amp;wek)</div><div class="ttdoc">Konstruktor kopiujacy wektora 3D. </div><div class="ttdef"><b>Definition:</b> <a href="wektor3_d_8hh_source.html#l00065">wektor3D.hh:65</a></div></div>
+<div class="ttc" id="wektor_8hh_html"><div class="ttname"><a href="wektor_8hh.html">wektor.hh</a></div></div>
+<div class="ttc" id="class_wektor3_d_html_a8e06c5739cc4ec3fe97177269872efd2"><div class="ttname"><a href="class_wektor3_d.html#a8e06c5739cc4ec3fe97177269872efd2">Wektor3D::Wektor3D</a></div><div class="ttdeci">Wektor3D(const Wektor&lt; double, 3 &gt; &amp;wek)</div><div class="ttdoc">Konstruktor kopiujacy wektora 3D. </div><div class="ttdef"><b>Definition:</b> <a href="wektor3_d_8hh_source.html#l00071">wektor3D.hh:71</a></div></div>
+<div class="ttc" id="class_wektor3_d_html_a7c48a57fd36c0af29e26c825f90a973f"><div class="ttname"><a href="class_wektor3_d.html#a7c48a57fd36c0af29e26c825f90a973f">Wektor3D::Wektor3D</a></div><div class="ttdeci">Wektor3D()</div><div class="ttdoc">Konstruktor bezparametryczny wektora 3D. </div><div class="ttdef"><b>Definition:</b> <a href="wektor3_d_8hh_source.html#l00040">wektor3D.hh:40</a></div></div>
+<div class="ttc" id="class_wektor_html"><div class="ttname"><a href="class_wektor.html">Wektor</a></div><div class="ttdoc">Klasa modelujaca pojecie wektora przy pomocy tablicy jednowymiarowej, podstawa budowy pojecia macierz...</div><div class="ttdef"><b>Definition:</b> <a href="wektor_8hh_source.html#l00011">wektor.hh:11</a></div></div>
+<div class="ttc" id="stale__wartosci_8h_html"><div class="ttname"><a href="stale__wartosci_8h.html">stale_wartosci.h</a></div></div>
+<div class="ttc" id="class_wektor3_d_html_af82ae24a30f6c4391edd67647348ac04"><div class="ttname"><a href="class_wektor3_d.html#af82ae24a30f6c4391edd67647348ac04">Wektor3D::~Wektor3D</a></div><div class="ttdeci">~Wektor3D()</div><div class="ttdoc">Destruktor wektora 3D. </div><div class="ttdef"><b>Definition:</b> <a href="wektor3_d_8hh_source.html#l00045">wektor3D.hh:45</a></div></div>
+<div class="ttc" id="class_wektor3_d_html_a1790e3cb0d7ab755639e901c3065831a"><div class="ttname"><a href="class_wektor3_d.html#a1790e3cb0d7ab755639e901c3065831a">Wektor3D::Pokaz_wek_teraz</a></div><div class="ttdeci">int Pokaz_wek_teraz() const</div><div class="ttdoc">Realizuje wypisanie aktualnej ilosci wektorow 3D na ekranie. </div><div class="ttdef"><b>Definition:</b> <a href="wektor3_d_8hh_source.html#l00035">wektor3D.hh:35</a></div></div>
+<div class="ttc" id="class_wektor3_d_html"><div class="ttname"><a href="class_wektor3_d.html">Wektor3D</a></div><div class="ttdoc">Klasa pochodna klasy Wektor realizujaca pojecie Wektora3D. </div><div class="ttdef"><b>Definition:</b> <a href="wektor3_d_8hh_source.html#l00011">wektor3D.hh:11</a></div></div>
+<div class="ttc" id="class_wektor3_d_html_a0defc77d38b1c9f9b1063d2b3459de5c"><div class="ttname"><a href="class_wektor3_d.html#a0defc77d38b1c9f9b1063d2b3459de5c">Wektor3D::Wektor3D</a></div><div class="ttdeci">Wektor3D(double x, double y, double z)</div><div class="ttdoc">Konstruktor parametryczny wektora 3D. </div><div class="ttdef"><b>Definition:</b> <a href="wektor3_d_8hh_source.html#l00053">wektor3D.hh:53</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_167790342fb55959539d550b874be046.html">project</a></li><li class="navelem"><a class="el" href="dir_0e6a83f483eb86bac30676662de98147.html">inc</a></li><li class="navelem"><a class="el" href="wektor3_d_8hh.html">wektor3D.hh</a></li>
+    <li class="footer">Wygenerowano przez
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
+</body>
+</html>

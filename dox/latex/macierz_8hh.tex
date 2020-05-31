@@ -1,0 +1,73 @@
+\hypertarget{macierz_8hh}{}\section{Dokumentacja pliku /home/michal/\+Documents/\+G\+I\+T\+\_\+\+R\+E\+P\+O\+S/\+I\+I-\/\+S\+E\+M-\/\+K\+P\+O/4\+: Dron podwodny/project/inc/macierz.hh}
+\label{macierz_8hh}\index{/home/michal/\+Documents/\+G\+I\+T\+\_\+\+R\+E\+P\+O\+S/\+I\+I-\/\+S\+E\+M-\/\+K\+P\+O/4\+: Dron podwodny/project/inc/macierz.\+hh@{/home/michal/\+Documents/\+G\+I\+T\+\_\+\+R\+E\+P\+O\+S/\+I\+I-\/\+S\+E\+M-\/\+K\+P\+O/4\+: Dron podwodny/project/inc/macierz.\+hh}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include \char`\"{}wektor.\+hh\char`\"{}}\newline
+Wykres zależności załączania dla macierz.\+hh\+:
+% FIG 0
+Ten wykres pokazuje, które pliki bezpośrednio lub pośrednio załączają ten plik\+:
+% FIG 1
+\subsection*{Komponenty}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_macierz}{Macierz$<$ Type, Size $>$}
+\begin{DoxyCompactList}\small\item\em Szablon Klasy modelujacej pojecie macierzy, za budowe kolumn macierzy odpowiadaja poszczegolne wektor co ulatwia dalsze obliczenia. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Type , int Size$>$ }\\std\+::ostream \& \hyperlink{macierz_8hh_a499afed56441e17daf178ebf5d524e33}{operator$<$$<$} (std\+::ostream \&strm, const \hyperlink{class_macierz}{Macierz}$<$ Type, Size $>$ \&Mac)
+\begin{DoxyCompactList}\small\item\em Realizuje wypisywanie macierzy na podany strumien. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Type , int Size$>$ }\\std\+::istream \& \hyperlink{macierz_8hh_a863ba607b06f11aeb6b87fa77a768eb7}{operator$>$$>$} (std\+::istream \&strm, \hyperlink{class_macierz}{Macierz}$<$ Type, Size $>$ \&Mac)
+\begin{DoxyCompactList}\small\item\em Realizuje wczytywanie macierzy z podanego strumienia (w celu testow) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Dokumentacja funkcji}
+\mbox{\Hypertarget{macierz_8hh_a499afed56441e17daf178ebf5d524e33}\label{macierz_8hh_a499afed56441e17daf178ebf5d524e33}} 
+\index{macierz.\+hh@{macierz.\+hh}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!macierz.\+hh@{macierz.\+hh}}
+\subsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily template$<$typename Type , int Size$>$ \\
+std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{strm,  }\item[{const \hyperlink{class_macierz}{Macierz}$<$ Type, Size $>$ \&}]{Mac }\end{DoxyParamCaption})}
+
+
+
+Realizuje wypisywanie macierzy na podany strumien. 
+
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em strm} & -\/ strumien wyjsciowy \\
+\hline
+\mbox{\tt in}  & {\em Mac} & -\/ objekt macierzy ktory zostanie wypisany \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Strumien wyjsciowy 
+\end{DoxyReturn}
+
+
+Definicja w linii 121 pliku macierz.\+hh.
+
+\mbox{\Hypertarget{macierz_8hh_a863ba607b06f11aeb6b87fa77a768eb7}\label{macierz_8hh_a863ba607b06f11aeb6b87fa77a768eb7}} 
+\index{macierz.\+hh@{macierz.\+hh}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!macierz.\+hh@{macierz.\+hh}}
+\subsubsection{\texorpdfstring{operator$>$$>$()}{operator>>()}}
+{\footnotesize\ttfamily template$<$typename Type , int Size$>$ \\
+std\+::istream\& operator$>$$>$ (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{strm,  }\item[{\hyperlink{class_macierz}{Macierz}$<$ Type, Size $>$ \&}]{Mac }\end{DoxyParamCaption})}
+
+
+
+Realizuje wczytywanie macierzy z podanego strumienia (w celu testow) 
+
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em strm} & -\/ strumien wejsciowy \\
+\hline
+\mbox{\tt in}  & {\em Mac} & -\/ objekt macierzy do ktorego nastapi wczytywanie \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Strumien wejsciowy 
+\end{DoxyReturn}
+
+
+Definicja w linii 142 pliku macierz.\+hh.
+

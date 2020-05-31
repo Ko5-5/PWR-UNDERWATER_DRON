@@ -1,0 +1,104 @@
+\hypertarget{class_figura__geo}{}\section{Dokumentacja klasy Figura\+\_\+geo}
+\label{class_figura__geo}\index{Figura\+\_\+geo@{Figura\+\_\+geo}}
+
+
+Klasa pochodna powierzchni, realizujaca modelowanie figury geometrycznej.  
+
+
+
+
+{\ttfamily \#include $<$figura\+\_\+geo.\+hh$>$}
+
+
+
+Diagram dziedziczenia dla Figura\+\_\+geo
+% FIG 0
+
+
+Diagram współpracy dla Figura\+\_\+geo\+:
+% FIG 1
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_figura__geo_ab50d6546e1c8307aa8a0140da3c99c46}{Figura\+\_\+geo} (std\+::ifstream \&plik\+\_\+wej)
+\begin{DoxyCompactList}\small\item\em Konstruktor parametryczny figury geometrycznej. \end{DoxyCompactList}\item 
+bool \hyperlink{class_figura__geo_a483685b8109e5413d4f67eda90990e09}{zapisz\+\_\+plik} (std\+::ostream \&plik\+\_\+wyj)
+\begin{DoxyCompactList}\small\item\em Realizuje zapis figury do podanego strumienia plikowego. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \hyperlink{class_wektor3_d}{Wektor3D} $>$ \hyperlink{class_figura__geo_a713a4371474b4f5b4d37be1f246da7fc}{tablica\+\_\+glob}
+\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+Klasa pochodna powierzchni, realizujaca modelowanie figury geometrycznej. 
+
+Definicja w linii 10 pliku figura\+\_\+geo.\+hh.
+
+
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\mbox{\Hypertarget{class_figura__geo_ab50d6546e1c8307aa8a0140da3c99c46}\label{class_figura__geo_ab50d6546e1c8307aa8a0140da3c99c46}} 
+\index{Figura\+\_\+geo@{Figura\+\_\+geo}!Figura\+\_\+geo@{Figura\+\_\+geo}}
+\index{Figura\+\_\+geo@{Figura\+\_\+geo}!Figura\+\_\+geo@{Figura\+\_\+geo}}
+\subsubsection{\texorpdfstring{Figura\+\_\+geo()}{Figura\_geo()}}
+{\footnotesize\ttfamily Figura\+\_\+geo\+::\+Figura\+\_\+geo (\begin{DoxyParamCaption}\item[{std\+::ifstream \&}]{plik\+\_\+wej }\end{DoxyParamCaption})}
+
+
+
+Konstruktor parametryczny figury geometrycznej. 
+
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em plik\+\_\+wej} & -\/ plik ukladu lokalnego figury geometrycznej \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 3 pliku figura\+\_\+geo.\+cpp.
+
+
+
+\subsection{Dokumentacja funkcji składowych}
+\mbox{\Hypertarget{class_figura__geo_a483685b8109e5413d4f67eda90990e09}\label{class_figura__geo_a483685b8109e5413d4f67eda90990e09}} 
+\index{Figura\+\_\+geo@{Figura\+\_\+geo}!zapisz\+\_\+plik@{zapisz\+\_\+plik}}
+\index{zapisz\+\_\+plik@{zapisz\+\_\+plik}!Figura\+\_\+geo@{Figura\+\_\+geo}}
+\subsubsection{\texorpdfstring{zapisz\+\_\+plik()}{zapisz\_plik()}}
+{\footnotesize\ttfamily bool Figura\+\_\+geo\+::zapisz\+\_\+plik (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{plik\+\_\+wyj }\end{DoxyParamCaption})}
+
+
+
+Realizuje zapis figury do podanego strumienia plikowego. 
+
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em plik\+\_\+wyj} & -\/ strumine plikowy \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Wartosc logiczna powodzenia zapisania figury 
+\end{DoxyReturn}
+
+
+Definicja w linii 17 pliku figura\+\_\+geo.\+cpp.
+
+
+
+\subsection{Dokumentacja atrybutów składowych}
+\mbox{\Hypertarget{class_figura__geo_a713a4371474b4f5b4d37be1f246da7fc}\label{class_figura__geo_a713a4371474b4f5b4d37be1f246da7fc}} 
+\index{Figura\+\_\+geo@{Figura\+\_\+geo}!tablica\+\_\+glob@{tablica\+\_\+glob}}
+\index{tablica\+\_\+glob@{tablica\+\_\+glob}!Figura\+\_\+geo@{Figura\+\_\+geo}}
+\subsubsection{\texorpdfstring{tablica\+\_\+glob}{tablica\_glob}}
+{\footnotesize\ttfamily std\+::vector$<$\hyperlink{class_wektor3_d}{Wektor3D}$>$ Figura\+\_\+geo\+::tablica\+\_\+glob}
+
+
+
+Definicja w linii 13 pliku figura\+\_\+geo.\+hh.
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+/home/michal/\+Documents/\+G\+I\+T\+\_\+\+R\+E\+P\+O\+S/\+I\+I-\/\+S\+E\+M-\/\+K\+P\+O/4\+: Dron podwodny/project/inc/\hyperlink{figura__geo_8hh}{figura\+\_\+geo.\+hh}\item 
+/home/michal/\+Documents/\+G\+I\+T\+\_\+\+R\+E\+P\+O\+S/\+I\+I-\/\+S\+E\+M-\/\+K\+P\+O/4\+: Dron podwodny/project/src/\hyperlink{figura__geo_8cpp}{figura\+\_\+geo.\+cpp}\end{DoxyCompactItemize}

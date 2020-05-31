@@ -1,0 +1,220 @@
+\hypertarget{class_macierz}{}\section{Dokumentacja szablonu klasy Macierz$<$ Type, Size $>$}
+\label{class_macierz}\index{Macierz$<$ Type, Size $>$@{Macierz$<$ Type, Size $>$}}
+
+
+Szablon Klasy modelujacej pojecie macierzy, za budowe kolumn macierzy odpowiadaja poszczegolne wektor co ulatwia dalsze obliczenia.  
+
+
+
+
+{\ttfamily \#include $<$macierz.\+hh$>$}
+
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_macierz_af94b65613b430a10008d6755597a0427}{Macierz} ()
+\begin{DoxyCompactList}\small\item\em Konstruktor tworzacy macierz wypelniona zerami. \end{DoxyCompactList}\item 
+Type \hyperlink{class_macierz_a4bbddc3fc040c6bb57d07a0ed75fd3f8}{operator()} (unsigned int pos\+\_\+1, unsigned int pos\+\_\+2) const
+\begin{DoxyCompactList}\small\item\em Realizuje ulatwienie dostepu do elementow macierzy. \end{DoxyCompactList}\item 
+Type \& \hyperlink{class_macierz_a27711c64282d546383e97cbc76748327}{operator()} (unsigned int pos\+\_\+1, unsigned int pos\+\_\+2)
+\begin{DoxyCompactList}\small\item\em Realizuje ulatwienie dostepu do elementow macierzy. \end{DoxyCompactList}\item 
+\hyperlink{class_wektor}{Wektor}$<$ Type, Size $>$ \hyperlink{class_macierz_abc3718ee888a07f9b1f6bc60447efb8d}{operator\mbox{[}$\,$\mbox{]}} (unsigned int pos) const
+\begin{DoxyCompactList}\small\item\em Przeciazenie \mbox{[}\mbox{]} ulatwiajace dostep do macierzy. \end{DoxyCompactList}\item 
+\hyperlink{class_wektor}{Wektor}$<$ Type, Size $>$ \& \hyperlink{class_macierz_adc2e2b93aa5b4079a756142e4d8402d1}{operator\mbox{[}$\,$\mbox{]}} (unsigned int pos)
+\begin{DoxyCompactList}\small\item\em Przeciazenie const \mbox{[}\mbox{]} ulatwiajace dostep do macierzy. \end{DoxyCompactList}\item 
+Type \hyperlink{class_macierz_a24a6eb57bea1568d7e4aecc342bb2461}{wyznacznik} () const
+\begin{DoxyCompactList}\small\item\em Realizuje wyliczenie wyznacznika macierzy metoda eliminacji Gaussa, sprowadzamy do macierzy digonalnej, a wyznacznik to iloczyn elementow na przekatnej. \end{DoxyCompactList}\item 
+\hyperlink{class_wektor}{Wektor}$<$ Type, Size $>$ \hyperlink{class_macierz_a16423e4cf46347d8464c9e3305e895fa}{operator$\ast$} (const \hyperlink{class_wektor}{Wektor}$<$ Type, Size $>$ \&wek) const
+\begin{DoxyCompactList}\small\item\em Przeciazenie operatora mnozenia macierzy przez wektor (wektor po prawej stronie macierzy) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_wektor}{Wektor}$<$ Type, Size $>$ \hyperlink{class_macierz_afa921845c2803b6105c5ac0ae3defa3d}{tab\+\_\+wartosci} \mbox{[}Size\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+\subsubsection*{template$<$typename Type, int Size$>$\newline
+class Macierz$<$ Type, Size $>$}
+
+Szablon Klasy modelujacej pojecie macierzy, za budowe kolumn macierzy odpowiadaja poszczegolne wektor co ulatwia dalsze obliczenia. 
+
+Definicja w linii 11 pliku macierz.\+hh.
+
+
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\mbox{\Hypertarget{class_macierz_af94b65613b430a10008d6755597a0427}\label{class_macierz_af94b65613b430a10008d6755597a0427}} 
+\index{Macierz@{Macierz}!Macierz@{Macierz}}
+\index{Macierz@{Macierz}!Macierz@{Macierz}}
+\subsubsection{\texorpdfstring{Macierz()}{Macierz()}}
+{\footnotesize\ttfamily template$<$typename Type, int Size$>$ \\
+\hyperlink{class_macierz}{Macierz}$<$ Type, Size $>$\+::\hyperlink{class_macierz}{Macierz} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Konstruktor tworzacy macierz wypelniona zerami. 
+
+
+
+Definicja w linii 20 pliku macierz.\+hh.
+
+
+
+\subsection{Dokumentacja funkcji składowych}
+\mbox{\Hypertarget{class_macierz_a4bbddc3fc040c6bb57d07a0ed75fd3f8}\label{class_macierz_a4bbddc3fc040c6bb57d07a0ed75fd3f8}} 
+\index{Macierz@{Macierz}!operator()@{operator()}}
+\index{operator()@{operator()}!Macierz@{Macierz}}
+\subsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Type, int Size$>$ \\
+Type \hyperlink{class_macierz}{Macierz}$<$ Type, Size $>$\+::operator() (\begin{DoxyParamCaption}\item[{unsigned int}]{pos\+\_\+1,  }\item[{unsigned int}]{pos\+\_\+2 }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Realizuje ulatwienie dostepu do elementow macierzy. 
+
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em pos\+\_\+1} & -\/ parametr pozycji 1 \\
+\hline
+\mbox{\tt in}  & {\em pos\+\_\+2} & -\/ parametr pozycji 2 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Element z macierzy 
+\end{DoxyReturn}
+
+
+Definicja w linii 28 pliku macierz.\+hh.
+
+\mbox{\Hypertarget{class_macierz_a27711c64282d546383e97cbc76748327}\label{class_macierz_a27711c64282d546383e97cbc76748327}} 
+\index{Macierz@{Macierz}!operator()@{operator()}}
+\index{operator()@{operator()}!Macierz@{Macierz}}
+\subsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Type, int Size$>$ \\
+Type\& \hyperlink{class_macierz}{Macierz}$<$ Type, Size $>$\+::operator() (\begin{DoxyParamCaption}\item[{unsigned int}]{pos\+\_\+1,  }\item[{unsigned int}]{pos\+\_\+2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Realizuje ulatwienie dostepu do elementow macierzy. 
+
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em pos\+\_\+1} & -\/ parametr pozycji 1 \\
+\hline
+\mbox{\tt in}  & {\em pos\+\_\+2} & -\/ parametr pozycji 2 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Element z macierzy 
+\end{DoxyReturn}
+
+
+Definicja w linii 36 pliku macierz.\+hh.
+
+\mbox{\Hypertarget{class_macierz_a16423e4cf46347d8464c9e3305e895fa}\label{class_macierz_a16423e4cf46347d8464c9e3305e895fa}} 
+\index{Macierz@{Macierz}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Macierz@{Macierz}}
+\subsubsection{\texorpdfstring{operator$\ast$()}{operator*()}}
+{\footnotesize\ttfamily template$<$typename Type, int Size$>$ \\
+\hyperlink{class_wektor}{Wektor}$<$ Type, Size $>$ \hyperlink{class_macierz}{Macierz}$<$ Type, Size $>$\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const \hyperlink{class_wektor}{Wektor}$<$ Type, Size $>$ \&}]{wek }\end{DoxyParamCaption}) const}
+
+
+
+Przeciazenie operatora mnozenia macierzy przez wektor (wektor po prawej stronie macierzy) 
+
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em wek} & -\/ wektor przez ktory mnozymy \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+\hyperlink{class_wektor}{Wektor} wynikowy operacji mnozenia 
+\end{DoxyReturn}
+
+
+Definicja w linii 100 pliku macierz.\+hh.
+
+\mbox{\Hypertarget{class_macierz_abc3718ee888a07f9b1f6bc60447efb8d}\label{class_macierz_abc3718ee888a07f9b1f6bc60447efb8d}} 
+\index{Macierz@{Macierz}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!Macierz@{Macierz}}
+\subsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Type, int Size$>$ \\
+\hyperlink{class_wektor}{Wektor}$<$Type,Size$>$ \hyperlink{class_macierz}{Macierz}$<$ Type, Size $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{unsigned int}]{pos }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Przeciazenie \mbox{[}\mbox{]} ulatwiajace dostep do macierzy. 
+
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em pos} & -\/ parametr przeciazenia \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Zwraca wektor odpowiedzialny za budowe wybranego wiersza 
+\end{DoxyReturn}
+
+
+Definicja w linii 43 pliku macierz.\+hh.
+
+\mbox{\Hypertarget{class_macierz_adc2e2b93aa5b4079a756142e4d8402d1}\label{class_macierz_adc2e2b93aa5b4079a756142e4d8402d1}} 
+\index{Macierz@{Macierz}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!Macierz@{Macierz}}
+\subsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Type, int Size$>$ \\
+\hyperlink{class_wektor}{Wektor}$<$Type,Size$>$\& \hyperlink{class_macierz}{Macierz}$<$ Type, Size $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{unsigned int}]{pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Przeciazenie const \mbox{[}\mbox{]} ulatwiajace dostep do macierzy. 
+
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em pos} & -\/ parametr przeciazenia \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Zwraca wektor odpowiedzialny za budowe wybranego wiersza 
+\end{DoxyReturn}
+
+
+Definicja w linii 50 pliku macierz.\+hh.
+
+\mbox{\Hypertarget{class_macierz_a24a6eb57bea1568d7e4aecc342bb2461}\label{class_macierz_a24a6eb57bea1568d7e4aecc342bb2461}} 
+\index{Macierz@{Macierz}!wyznacznik@{wyznacznik}}
+\index{wyznacznik@{wyznacznik}!Macierz@{Macierz}}
+\subsubsection{\texorpdfstring{wyznacznik()}{wyznacznik()}}
+{\footnotesize\ttfamily template$<$typename Type , int Size$>$ \\
+Type \hyperlink{class_macierz}{Macierz}$<$ Type, Size $>$\+::wyznacznik (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Realizuje wyliczenie wyznacznika macierzy metoda eliminacji Gaussa, sprowadzamy do macierzy digonalnej, a wyznacznik to iloczyn elementow na przekatnej. 
+
+\begin{DoxyReturn}{Zwraca}
+Wartosc wyznacznika 
+\end{DoxyReturn}
+
+
+Definicja w linii 67 pliku macierz.\+hh.
+
+
+
+\subsection{Dokumentacja atrybutów składowych}
+\mbox{\Hypertarget{class_macierz_afa921845c2803b6105c5ac0ae3defa3d}\label{class_macierz_afa921845c2803b6105c5ac0ae3defa3d}} 
+\index{Macierz@{Macierz}!tab\+\_\+wartosci@{tab\+\_\+wartosci}}
+\index{tab\+\_\+wartosci@{tab\+\_\+wartosci}!Macierz@{Macierz}}
+\subsubsection{\texorpdfstring{tab\+\_\+wartosci}{tab\_wartosci}}
+{\footnotesize\ttfamily template$<$typename Type, int Size$>$ \\
+\hyperlink{class_wektor}{Wektor}$<$Type,Size$>$ \hyperlink{class_macierz}{Macierz}$<$ Type, Size $>$\+::tab\+\_\+wartosci\mbox{[}Size\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definicja w linii 14 pliku macierz.\+hh.
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z pliku\+:\begin{DoxyCompactItemize}
+\item 
+/home/michal/\+Documents/\+G\+I\+T\+\_\+\+R\+E\+P\+O\+S/\+I\+I-\/\+S\+E\+M-\/\+K\+P\+O/4\+: Dron podwodny/project/inc/\hyperlink{macierz_8hh}{macierz.\+hh}\end{DoxyCompactItemize}

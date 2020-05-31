@@ -1,0 +1,106 @@
+\hypertarget{class_macierz3_d}{}\section{Dokumentacja klasy Macierz3D}
+\label{class_macierz3_d}\index{Macierz3D@{Macierz3D}}
+
+
+Klasa pochodna macierzy, realizuje \hyperlink{class_macierz}{Macierz} 3D.  
+
+
+
+
+{\ttfamily \#include $<$macierz3\+D.\+hh$>$}
+
+
+
+Diagram dziedziczenia dla Macierz3D
+% FIG 0
+
+
+Diagram współpracy dla Macierz3D\+:
+% FIG 1
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_macierz3_d_a87e295bc44d70307c0906a2daa726367}{Macierz3D} ()
+\begin{DoxyCompactList}\small\item\em Konstruktor bezparametryczny Macierzy 3D. \end{DoxyCompactList}\item 
+\hyperlink{class_macierz3_d_a7b98d42274e7ee724188d00dffdcd69b}{Macierz3D} (\hyperlink{class_wektor3_d}{Wektor3D} pos\+\_\+0, \hyperlink{class_wektor3_d}{Wektor3D} pos\+\_\+1, \hyperlink{class_wektor3_d}{Wektor3D} pos\+\_\+2)
+\begin{DoxyCompactList}\small\item\em Konstruktor parametryczny. \end{DoxyCompactList}\item 
+\hyperlink{class_wektor3_d}{Wektor3D} \hyperlink{class_macierz3_d_a3896e21fc7cf77a172c413738c5fccbd}{operator$\ast$} (\hyperlink{class_wektor3_d}{Wektor3D} \&wek)
+\begin{DoxyCompactList}\small\item\em Przeciazenie operatora mnozenia Macierzy 3D przez \hyperlink{class_wektor}{Wektor} 3D. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+Klasa pochodna macierzy, realizuje \hyperlink{class_macierz}{Macierz} 3D. 
+
+Definicja w linii 10 pliku macierz3\+D.\+hh.
+
+
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\mbox{\Hypertarget{class_macierz3_d_a87e295bc44d70307c0906a2daa726367}\label{class_macierz3_d_a87e295bc44d70307c0906a2daa726367}} 
+\index{Macierz3D@{Macierz3D}!Macierz3D@{Macierz3D}}
+\index{Macierz3D@{Macierz3D}!Macierz3D@{Macierz3D}}
+\subsubsection{\texorpdfstring{Macierz3\+D()}{Macierz3D()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Macierz3\+D\+::\+Macierz3D (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Konstruktor bezparametryczny Macierzy 3D. 
+
+
+
+Definicja w linii 3 pliku macierz3\+D.\+cpp.
+
+\mbox{\Hypertarget{class_macierz3_d_a7b98d42274e7ee724188d00dffdcd69b}\label{class_macierz3_d_a7b98d42274e7ee724188d00dffdcd69b}} 
+\index{Macierz3D@{Macierz3D}!Macierz3D@{Macierz3D}}
+\index{Macierz3D@{Macierz3D}!Macierz3D@{Macierz3D}}
+\subsubsection{\texorpdfstring{Macierz3\+D()}{Macierz3D()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Macierz3\+D\+::\+Macierz3D (\begin{DoxyParamCaption}\item[{\hyperlink{class_wektor3_d}{Wektor3D}}]{pos\+\_\+0,  }\item[{\hyperlink{class_wektor3_d}{Wektor3D}}]{pos\+\_\+1,  }\item[{\hyperlink{class_wektor3_d}{Wektor3D}}]{pos\+\_\+2 }\end{DoxyParamCaption})}
+
+
+
+Konstruktor parametryczny. 
+
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em pos\+\_\+0} & -\/ wektor tworzacy macierz 1 \\
+\hline
+\mbox{\tt in}  & {\em pos\+\_\+1} & -\/ wektor tworzacy macierz 2 \\
+\hline
+\mbox{\tt in}  & {\em pos\+\_\+2} & -\/ wektor tworzacy macierz 3 \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 10 pliku macierz3\+D.\+cpp.
+
+
+
+\subsection{Dokumentacja funkcji składowych}
+\mbox{\Hypertarget{class_macierz3_d_a3896e21fc7cf77a172c413738c5fccbd}\label{class_macierz3_d_a3896e21fc7cf77a172c413738c5fccbd}} 
+\index{Macierz3D@{Macierz3D}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Macierz3D@{Macierz3D}}
+\subsubsection{\texorpdfstring{operator$\ast$()}{operator*()}}
+{\footnotesize\ttfamily \hyperlink{class_wektor3_d}{Wektor3D} Macierz3\+D\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{\hyperlink{class_wektor3_d}{Wektor3D} \&}]{wek }\end{DoxyParamCaption})}
+
+
+
+Przeciazenie operatora mnozenia Macierzy 3D przez \hyperlink{class_wektor}{Wektor} 3D. 
+
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em wek} & -\/ wektor przez ktory sie mnozy \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+\hyperlink{class_wektor}{Wektor} bedacy iloczynem macierzy i wektora 
+\end{DoxyReturn}
+
+
+Definicja w linii 17 pliku macierz3\+D.\+cpp.
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+/home/michal/\+Documents/\+G\+I\+T\+\_\+\+R\+E\+P\+O\+S/\+I\+I-\/\+S\+E\+M-\/\+K\+P\+O/4\+: Dron podwodny/project/inc/\hyperlink{macierz3_d_8hh}{macierz3\+D.\+hh}\item 
+/home/michal/\+Documents/\+G\+I\+T\+\_\+\+R\+E\+P\+O\+S/\+I\+I-\/\+S\+E\+M-\/\+K\+P\+O/4\+: Dron podwodny/project/src/\hyperlink{macierz3_d_8cpp}{macierz3\+D.\+cpp}\end{DoxyCompactItemize}

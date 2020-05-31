@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Dron podwodny: Plik źródłowy /home/michal/Documents/GIT_REPOS/II-SEM-KPO/4: Dron podwodny/project/inc/powierzchnia.hh</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Dron podwodny
+   &#160;<span id="projectnumber">0.1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('powierzchnia_8hh_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">powierzchnia.hh</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="powierzchnia_8hh.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef POWIERZCHNIA_HH</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define POWIERZCHNIA_HH</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="wektor3_d_8hh.html">wektor3D.hh</a>&quot;</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="stale__wartosci_8h.html">stale_wartosci.h</a>&quot;</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div><div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_powierzchnia.html">   12</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_powierzchnia.html">Powierzchnia</a></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keyword">public</span>:</div><div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_powierzchnia.html#ad4f42cfe700565a02dc07ead950d4c53">   15</a></span>&#160;    std::vector&lt;Wektor3D&gt; <a class="code" href="class_powierzchnia.html#ad4f42cfe700565a02dc07ead950d4c53">tablica</a>;</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div><div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_powierzchnia.html#a0ade86d34d549ffab3288f54185df0f5">   22</a></span>&#160;    <a class="code" href="class_wektor3_d.html">Wektor3D</a> <a class="code" href="class_powierzchnia.html#a0ade86d34d549ffab3288f54185df0f5">operator [] </a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="class_powierzchnia.html#a9ec2cb128f77750a89995e8065fee3c4">size</a>)<span class="keyword"> const </span>{<span class="keywordflow">return</span> tablica[<a class="code" href="class_powierzchnia.html#a9ec2cb128f77750a89995e8065fee3c4">size</a>];}</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div><div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="class_powierzchnia.html#a8d69764400f092f37d3a401bf4875c34">   29</a></span>&#160;    <a class="code" href="class_wektor3_d.html">Wektor3D</a> &amp; <a class="code" href="class_powierzchnia.html#a0ade86d34d549ffab3288f54185df0f5">operator [] </a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="class_powierzchnia.html#a9ec2cb128f77750a89995e8065fee3c4">size</a>) {<span class="keywordflow">return</span> tablica[<a class="code" href="class_powierzchnia.html#a9ec2cb128f77750a89995e8065fee3c4">size</a>];}</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div><div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="class_powierzchnia.html#ad0843dc06dba95cea7578f60695064f2">   37</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="class_powierzchnia.html#ad0843dc06dba95cea7578f60695064f2">operator () </a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> size1, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> size2)<span class="keyword"> const </span>{<span class="keywordflow">return</span> tablica[size1][size2];}</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div><div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="class_powierzchnia.html#a40f99424854030714cd447cf5824f888">   45</a></span>&#160;    <span class="keywordtype">double</span> &amp; <a class="code" href="class_powierzchnia.html#ad0843dc06dba95cea7578f60695064f2">operator () </a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> size1, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> size2) {<span class="keywordflow">return</span> tablica[size1][size2];}</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div><div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="class_powierzchnia.html#a9ec2cb128f77750a89995e8065fee3c4">   51</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_powierzchnia.html#a9ec2cb128f77750a89995e8065fee3c4">size</a> () {<span class="keywordflow">return</span> tablica.size();}</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div><div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="class_powierzchnia.html#a27dc891c3c0dd476c6c3b51389a85d08">   57</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_powierzchnia.html#a27dc891c3c0dd476c6c3b51389a85d08">size</a> ()<span class="keyword"> const </span>{<span class="keywordflow">return</span> tablica.size();}</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;};</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;std::ostream &amp; <a class="code" href="powierzchnia_8hh.html#a96e1f55244bb867a29249eee1ea1e4f6">operator &lt;&lt; </a>(std::ostream &amp; Strm, <span class="keyword">const</span> <a class="code" href="class_powierzchnia.html">Powierzchnia</a> &amp; tab);</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="preprocessor">#endif</span></div><div class="ttc" id="class_powierzchnia_html"><div class="ttname"><a href="class_powierzchnia.html">Powierzchnia</a></div><div class="ttdoc">Bazowa klasa realizujaca pojecie powierzchni posiadajacej dynamiczna tablice wektorow 3D...</div><div class="ttdef"><b>Definition:</b> <a href="powierzchnia_8hh_source.html#l00012">powierzchnia.hh:12</a></div></div>
+<div class="ttc" id="class_powierzchnia_html_a0ade86d34d549ffab3288f54185df0f5"><div class="ttname"><a href="class_powierzchnia.html#a0ade86d34d549ffab3288f54185df0f5">Powierzchnia::operator[]</a></div><div class="ttdeci">Wektor3D operator[](unsigned int size) const</div><div class="ttdoc">Przeciazenie operatora [] pozwalajace na dostep do wektorow w tablicy. </div><div class="ttdef"><b>Definition:</b> <a href="powierzchnia_8hh_source.html#l00022">powierzchnia.hh:22</a></div></div>
+<div class="ttc" id="powierzchnia_8hh_html_a96e1f55244bb867a29249eee1ea1e4f6"><div class="ttname"><a href="powierzchnia_8hh.html#a96e1f55244bb867a29249eee1ea1e4f6">operator&lt;&lt;</a></div><div class="ttdeci">std::ostream &amp; operator&lt;&lt;(std::ostream &amp;Strm, const Powierzchnia &amp;tab)</div><div class="ttdoc">Przeciazenie operatora &lt;&lt; dla wypisania powierzchni na strumien wyjsciowy. </div><div class="ttdef"><b>Definition:</b> <a href="powierzchnia_8cpp_source.html#l00003">powierzchnia.cpp:3</a></div></div>
+<div class="ttc" id="class_powierzchnia_html_ad0843dc06dba95cea7578f60695064f2"><div class="ttname"><a href="class_powierzchnia.html#ad0843dc06dba95cea7578f60695064f2">Powierzchnia::operator()</a></div><div class="ttdeci">double operator()(unsigned int size1, unsigned int size2) const</div><div class="ttdoc">Przeciazenie operatora () pozwalajace na dostep do wartosci double w podanym wektorze tablicy wektoro...</div><div class="ttdef"><b>Definition:</b> <a href="powierzchnia_8hh_source.html#l00037">powierzchnia.hh:37</a></div></div>
+<div class="ttc" id="class_powierzchnia_html_a27dc891c3c0dd476c6c3b51389a85d08"><div class="ttname"><a href="class_powierzchnia.html#a27dc891c3c0dd476c6c3b51389a85d08">Powierzchnia::size</a></div><div class="ttdeci">int size() const</div><div class="ttdoc">Funkcja realizujaca ukazanie wielkosci tablicy wektorow. </div><div class="ttdef"><b>Definition:</b> <a href="powierzchnia_8hh_source.html#l00057">powierzchnia.hh:57</a></div></div>
+<div class="ttc" id="stale__wartosci_8h_html"><div class="ttname"><a href="stale__wartosci_8h.html">stale_wartosci.h</a></div></div>
+<div class="ttc" id="class_wektor3_d_html"><div class="ttname"><a href="class_wektor3_d.html">Wektor3D</a></div><div class="ttdoc">Klasa pochodna klasy Wektor realizujaca pojecie Wektora3D. </div><div class="ttdef"><b>Definition:</b> <a href="wektor3_d_8hh_source.html#l00011">wektor3D.hh:11</a></div></div>
+<div class="ttc" id="wektor3_d_8hh_html"><div class="ttname"><a href="wektor3_d_8hh.html">wektor3D.hh</a></div></div>
+<div class="ttc" id="class_powierzchnia_html_ad4f42cfe700565a02dc07ead950d4c53"><div class="ttname"><a href="class_powierzchnia.html#ad4f42cfe700565a02dc07ead950d4c53">Powierzchnia::tablica</a></div><div class="ttdeci">std::vector&lt; Wektor3D &gt; tablica</div><div class="ttdef"><b>Definition:</b> <a href="powierzchnia_8hh_source.html#l00015">powierzchnia.hh:15</a></div></div>
+<div class="ttc" id="class_powierzchnia_html_a9ec2cb128f77750a89995e8065fee3c4"><div class="ttname"><a href="class_powierzchnia.html#a9ec2cb128f77750a89995e8065fee3c4">Powierzchnia::size</a></div><div class="ttdeci">int size()</div><div class="ttdoc">Funkcja realizujaca ukazanie wielkosci tablicy wektorow. </div><div class="ttdef"><b>Definition:</b> <a href="powierzchnia_8hh_source.html#l00051">powierzchnia.hh:51</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_167790342fb55959539d550b874be046.html">project</a></li><li class="navelem"><a class="el" href="dir_0e6a83f483eb86bac30676662de98147.html">inc</a></li><li class="navelem"><a class="el" href="powierzchnia_8hh.html">powierzchnia.hh</a></li>
+    <li class="footer">Wygenerowano przez
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
+</body>
+</html>

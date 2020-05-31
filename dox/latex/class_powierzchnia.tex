@@ -1,0 +1,189 @@
+\hypertarget{class_powierzchnia}{}\section{Dokumentacja klasy Powierzchnia}
+\label{class_powierzchnia}\index{Powierzchnia@{Powierzchnia}}
+
+
+Bazowa klasa realizujaca pojecie powierzchni posiadajacej dynamiczna tablice wektorow 3D.  
+
+
+
+
+{\ttfamily \#include $<$powierzchnia.\+hh$>$}
+
+
+
+Diagram dziedziczenia dla Powierzchnia
+% FIG 0
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_wektor3_d}{Wektor3D} \hyperlink{class_powierzchnia_a0ade86d34d549ffab3288f54185df0f5}{operator\mbox{[}$\,$\mbox{]}} (unsigned int \hyperlink{class_powierzchnia_a9ec2cb128f77750a89995e8065fee3c4}{size}) const
+\begin{DoxyCompactList}\small\item\em Przeciazenie operatora \mbox{[}\mbox{]} pozwalajace na dostep do wektorow w tablicy. \end{DoxyCompactList}\item 
+\hyperlink{class_wektor3_d}{Wektor3D} \& \hyperlink{class_powierzchnia_a8d69764400f092f37d3a401bf4875c34}{operator\mbox{[}$\,$\mbox{]}} (unsigned int \hyperlink{class_powierzchnia_a9ec2cb128f77750a89995e8065fee3c4}{size})
+\begin{DoxyCompactList}\small\item\em Przeciazenie operatora \mbox{[}\mbox{]} pozwalajace na dostep do wektorow w tablicy. \end{DoxyCompactList}\item 
+double \hyperlink{class_powierzchnia_ad0843dc06dba95cea7578f60695064f2}{operator()} (unsigned int size1, unsigned int size2) const
+\begin{DoxyCompactList}\small\item\em Przeciazenie operatora () pozwalajace na dostep do wartosci double w podanym wektorze tablicy wektorow. \end{DoxyCompactList}\item 
+double \& \hyperlink{class_powierzchnia_a40f99424854030714cd447cf5824f888}{operator()} (unsigned int size1, unsigned int size2)
+\begin{DoxyCompactList}\small\item\em Przeciazenie operatora () pozwalajace na dostep do wartosci double w podanym wektorze tablicy wektorow. \end{DoxyCompactList}\item 
+int \hyperlink{class_powierzchnia_a9ec2cb128f77750a89995e8065fee3c4}{size} ()
+\begin{DoxyCompactList}\small\item\em Funkcja realizujaca ukazanie wielkosci tablicy wektorow. \end{DoxyCompactList}\item 
+int \hyperlink{class_powierzchnia_a27dc891c3c0dd476c6c3b51389a85d08}{size} () const
+\begin{DoxyCompactList}\small\item\em Funkcja realizujaca ukazanie wielkosci tablicy wektorow. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \hyperlink{class_wektor3_d}{Wektor3D} $>$ \hyperlink{class_powierzchnia_ad4f42cfe700565a02dc07ead950d4c53}{tablica}
+\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+Bazowa klasa realizujaca pojecie powierzchni posiadajacej dynamiczna tablice wektorow 3D. 
+
+Definicja w linii 12 pliku powierzchnia.\+hh.
+
+
+
+\subsection{Dokumentacja funkcji składowych}
+\mbox{\Hypertarget{class_powierzchnia_ad0843dc06dba95cea7578f60695064f2}\label{class_powierzchnia_ad0843dc06dba95cea7578f60695064f2}} 
+\index{Powierzchnia@{Powierzchnia}!operator()@{operator()}}
+\index{operator()@{operator()}!Powierzchnia@{Powierzchnia}}
+\subsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily double Powierzchnia\+::operator() (\begin{DoxyParamCaption}\item[{unsigned int}]{size1,  }\item[{unsigned int}]{size2 }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Przeciazenie operatora () pozwalajace na dostep do wartosci double w podanym wektorze tablicy wektorow. 
+
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em size1} & -\/ liczba wskazujaca na dany wektor z tablicy \\
+\hline
+\mbox{\tt in}  & {\em size2} & -\/ liczba wskazujaca na dany element z wektora \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Wybrana wartosc double z danego wektora 3D 
+\end{DoxyReturn}
+
+
+Definicja w linii 37 pliku powierzchnia.\+hh.
+
+\mbox{\Hypertarget{class_powierzchnia_a40f99424854030714cd447cf5824f888}\label{class_powierzchnia_a40f99424854030714cd447cf5824f888}} 
+\index{Powierzchnia@{Powierzchnia}!operator()@{operator()}}
+\index{operator()@{operator()}!Powierzchnia@{Powierzchnia}}
+\subsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily double\& Powierzchnia\+::operator() (\begin{DoxyParamCaption}\item[{unsigned int}]{size1,  }\item[{unsigned int}]{size2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Przeciazenie operatora () pozwalajace na dostep do wartosci double w podanym wektorze tablicy wektorow. 
+
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em size1} & -\/ liczba wskazujaca na dany wektor z tablicy \\
+\hline
+\mbox{\tt in}  & {\em size2} & -\/ liczba wskazujaca na dany element z wektora \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Wybrana wartosc double z danego wektora 3D 
+\end{DoxyReturn}
+
+
+Definicja w linii 45 pliku powierzchnia.\+hh.
+
+\mbox{\Hypertarget{class_powierzchnia_a0ade86d34d549ffab3288f54185df0f5}\label{class_powierzchnia_a0ade86d34d549ffab3288f54185df0f5}} 
+\index{Powierzchnia@{Powierzchnia}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!Powierzchnia@{Powierzchnia}}
+\subsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{class_wektor3_d}{Wektor3D} Powierzchnia\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{unsigned int}]{size }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Przeciazenie operatora \mbox{[}\mbox{]} pozwalajace na dostep do wektorow w tablicy. 
+
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em size} & -\/ liczba wskazujaca na element tablicy \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Wybrany wektor 3D 
+\end{DoxyReturn}
+
+
+Definicja w linii 22 pliku powierzchnia.\+hh.
+
+\mbox{\Hypertarget{class_powierzchnia_a8d69764400f092f37d3a401bf4875c34}\label{class_powierzchnia_a8d69764400f092f37d3a401bf4875c34}} 
+\index{Powierzchnia@{Powierzchnia}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!Powierzchnia@{Powierzchnia}}
+\subsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{class_wektor3_d}{Wektor3D}\& Powierzchnia\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{unsigned int}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Przeciazenie operatora \mbox{[}\mbox{]} pozwalajace na dostep do wektorow w tablicy. 
+
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em size} & -\/ liczba wskazujaca na element tablicy \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Wybrany wektor 3D 
+\end{DoxyReturn}
+
+
+Definicja w linii 29 pliku powierzchnia.\+hh.
+
+\mbox{\Hypertarget{class_powierzchnia_a9ec2cb128f77750a89995e8065fee3c4}\label{class_powierzchnia_a9ec2cb128f77750a89995e8065fee3c4}} 
+\index{Powierzchnia@{Powierzchnia}!size@{size}}
+\index{size@{size}!Powierzchnia@{Powierzchnia}}
+\subsubsection{\texorpdfstring{size()}{size()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int Powierzchnia\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Funkcja realizujaca ukazanie wielkosci tablicy wektorow. 
+
+\begin{DoxyReturn}{Zwraca}
+Wielkosc tablicy 
+\end{DoxyReturn}
+
+
+Definicja w linii 51 pliku powierzchnia.\+hh.
+
+\mbox{\Hypertarget{class_powierzchnia_a27dc891c3c0dd476c6c3b51389a85d08}\label{class_powierzchnia_a27dc891c3c0dd476c6c3b51389a85d08}} 
+\index{Powierzchnia@{Powierzchnia}!size@{size}}
+\index{size@{size}!Powierzchnia@{Powierzchnia}}
+\subsubsection{\texorpdfstring{size()}{size()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int Powierzchnia\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Funkcja realizujaca ukazanie wielkosci tablicy wektorow. 
+
+\begin{DoxyReturn}{Zwraca}
+Wielkosc tablicy 
+\end{DoxyReturn}
+
+
+Definicja w linii 57 pliku powierzchnia.\+hh.
+
+
+
+\subsection{Dokumentacja atrybutów składowych}
+\mbox{\Hypertarget{class_powierzchnia_ad4f42cfe700565a02dc07ead950d4c53}\label{class_powierzchnia_ad4f42cfe700565a02dc07ead950d4c53}} 
+\index{Powierzchnia@{Powierzchnia}!tablica@{tablica}}
+\index{tablica@{tablica}!Powierzchnia@{Powierzchnia}}
+\subsubsection{\texorpdfstring{tablica}{tablica}}
+{\footnotesize\ttfamily std\+::vector$<$\hyperlink{class_wektor3_d}{Wektor3D}$>$ Powierzchnia\+::tablica}
+
+
+
+Definicja w linii 15 pliku powierzchnia.\+hh.
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z pliku\+:\begin{DoxyCompactItemize}
+\item 
+/home/michal/\+Documents/\+G\+I\+T\+\_\+\+R\+E\+P\+O\+S/\+I\+I-\/\+S\+E\+M-\/\+K\+P\+O/4\+: Dron podwodny/project/inc/\hyperlink{powierzchnia_8hh}{powierzchnia.\+hh}\end{DoxyCompactItemize}
