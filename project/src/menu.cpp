@@ -16,30 +16,32 @@ void opcje_menu()
     std::cout << std::endl;
 }
 
-bool menu()
+void inicjalizuj_lacze(PzG::LaczeDoGNUPlota & Lacze)
 {
-    char znak = 'm';
-    
-    PzG::LaczeDoGNUPlota Lacze;
-
     Lacze.Inicjalizuj();
 
     Lacze.ZmienTrybRys(PzG::TR_3D);
 
     Lacze.UstawRotacjeXZ(75,80);
+
     Lacze.UstawZakresZ(-110,10);
-
-    ofstream Plik;
-
-    ifstream Plik_dron;
-    Plik_dron.open("bryly/dron-lok.dat");
-
-    Dron dron = Dron(Plik_dron);
-
     Lacze.UstawZakresX(0,70);
     Lacze.UstawZakresY(0,70);
 
     Lacze.DodajNazwePliku("dat/scena.dat");
+}
+
+bool menu()
+{
+    char znak = 'm';
+    ofstream Plik;
+    ifstream Plik_dron;
+    Plik_dron.open("bryly/dron-lok.dat");
+
+    PzG::LaczeDoGNUPlota Lacze;
+    inicjalizuj_lacze(Lacze);
+
+    Scena scena = Scena(0,70,0,70, Plik_dron);
 
     while(znak!='k')
     {
@@ -69,25 +71,19 @@ bool menu()
                 for(int i=0; i<krok; i++)
                 {
                     Plik.open("dat/scena.dat");
-                    Lacze.UstawZakresX(dron[X]-OTOCZENIE_DRONA,dron[X]+OTOCZENIE_DRONA);
-                    Lacze.UstawZakresY(dron[Y]-OTOCZENIE_DRONA,dron[Y]+OTOCZENIE_DRONA);
-                    Scena * scena = new Scena(dron[X]-OTOCZENIE_DRONA,dron[X]+OTOCZENIE_DRONA,dron[Y]-OTOCZENIE_DRONA,dron[Y]+OTOCZENIE_DRONA);
-                    if(!(*scena).zapisz_plik(Plik))
+                    Lacze.UstawZakresX(scena()[X]-OTOCZENIE_DRONA,scena()[X]+OTOCZENIE_DRONA);
+                    Lacze.UstawZakresY(scena()[Y]-OTOCZENIE_DRONA,scena()[Y]+OTOCZENIE_DRONA);
+                    scena.generuj_dno_woda(scena()[X]-OTOCZENIE_DRONA,scena()[X]+OTOCZENIE_DRONA,scena()[Y]-OTOCZENIE_DRONA,scena()[Y]+OTOCZENIE_DRONA);
+                    scena().ruch_przod_kat(1,kat);
+                    scena().translacja_glob();
+                    if(!scena.zapisz_plik(Plik))
                     {
                         cerr << "Blad zapisu sceny do pliku dat" << endl;
                         return 1;
                     }
-                    delete scena;
-                    dron.ruch_przod_kat(1,kat);
-                    dron.translacja_glob();
-                    if(!dron.zapisz_plik(Plik))
-                    {
-                        cerr << "Blad zapisu drona do pliku dat" << endl;
-                        return 1;
-                    }
                     Plik.close();
                     Lacze.Rysuj();
-                    if((dron[Z]-10) < POZ_DNA)
+                    if((scena()[Z]-10) < POZ_DNA)
                     {
                         std::cout << "Dron uderza w dno, koniec programu" << std::endl;
                         exit(-1);
@@ -110,27 +106,20 @@ bool menu()
                 for(int i=0; i<abs(kat); i++)
                 {
                     Plik.open("dat/scena.dat");
-                    Scena * scena = new Scena(dron[X]-35,dron[X]+35,dron[Y]-35,dron[Y]+35);
-                    if(!(*scena).zapisz_plik(Plik))
+                    if(kat>0)
+                    {
+                        scena().obrot_kat (1);
+                    }
+                    else
+                    {
+                        scena().obrot_kat (-1);
+                    }
+                    scena().translacja_glob();
+                    if(!scena.zapisz_plik(Plik))
                     {
                         cerr << "Blad zapisu sceny do pliku dat" << endl;
                         return 1;
                     }
-                    if(kat>0)
-                    {
-                        dron.obrot_os_kat(Z,1);
-                    }
-                    else
-                    {
-                        dron.obrot_os_kat(Z,-1);
-                    }
-                    dron.translacja_glob();
-                    if(!dron.zapisz_plik(Plik))
-                    {
-                        cerr << "Blad zapisu drona do pliku dat" << endl;
-                        return 1;
-                    }
-                    delete scena;
                     Plik.close();
                     Lacze.Rysuj();
                     usleep(100000);

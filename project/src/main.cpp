@@ -17,7 +17,7 @@ int main()
   Lacze.ZmienTrybRys(PzG::TR_3D);
 
   Lacze.UstawRotacjeXZ(75,80);
-  Lacze.UstawZakresZ(-110,10);
+  Lacze.UstawZakresZ(-30,30);
 
   ofstream Plik;
 
@@ -26,11 +26,12 @@ int main()
 
   Dron dron = Dron(Plik_dron);
 
-  Lacze.UstawZakresX(0,70);
-  Lacze.UstawZakresY(0,70);
+  Lacze.UstawZakresX(-10,10);
+  Lacze.UstawZakresY(-10,10);
 
-  Lacze.DodajNazwePliku("dat/scena.dat");
-  
+  Lacze.DodajNazwePliku("bryly/dron-lok.dat");
+  Lacze.Rysuj();
+
   for(int i=0; i<60; i++)
   {
     Plik.open("dat/scena.dat");
@@ -59,7 +60,7 @@ int main()
     }
     usleep(100000);
   }
- 
+
   Wektor3D licznik = Wektor3D(0,0,0);
   cout << "Łacznie: "<< licznik.Pokaz_Wek_lacznie() << endl;
   cout << "Teraz: " << licznik.Pokaz_wek_teraz() << endl;

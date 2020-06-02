@@ -18,9 +18,11 @@ class Dron : public Figura_geo
     /**
      * \brief Pole obrotu drona wzgledem oryginalnego polozenia
      **/
-    Wektor3D obrot_kat = Wektor3D(0,0,0);
+    Wektor3D obrot = Wektor3D(0,0,0);
 
     public:
+    Dron():Figura_geo() {};
+
     /**
      * \brief Konstruktor parametryczny Drona, bierze plik z wsp lokalnymi i zapisuje do tablicy lokalnej
      * \param[in] plik_wej - strumien plikowy wczytywania drona w ukladzie lokalnym
@@ -69,7 +71,7 @@ class Dron : public Figura_geo
      * \param[in] os - os obrotu
      * \param[in] kat - kat obrotu
      **/
-    void obrot_os_kat(int os, double kat);
+    void obrot_kat(double kat);
 
 };
 

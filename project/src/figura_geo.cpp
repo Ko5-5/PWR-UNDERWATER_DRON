@@ -34,3 +34,4 @@ bool Figura_geo::zapisz_plik(std::ostream & plik_wyj)
 
     return true;
 }
+

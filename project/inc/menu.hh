@@ -16,6 +16,11 @@
 void opcje_menu();
 
 /**
+ * \brief Realizuje inizjalizacje lacza z gnuplotem
+ **/
+void inicjalizuj_lacze(PzG::LaczeDoGNUPlota & Lacze);
+
+/**
  * \brief Realizuje obsluge programu i kontakt z uzytkownikiem
  **/
 bool menu();

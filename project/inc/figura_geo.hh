@@ -12,6 +12,8 @@ class Figura_geo : public Powierzchnia
     public:
     std::vector<Wektor3D> tablica_glob;
 
+    Figura_geo() {};
+
     /**
      * \brief Konstruktor parametryczny figury geometrycznej
      * \param[in] plik_wej - plik ukladu lokalnego figury geometrycznej
