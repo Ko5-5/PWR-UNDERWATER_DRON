@@ -4,6 +4,7 @@
 #include <cmath>
 #include "figura_geo.hh"
 #include "macierz3D.hh"
+#include "wirnik.hh"
 
 /**
  * \brief Klasa pochodna figury geometrycznej realizujaca modelowanie drona
@@ -19,6 +20,8 @@ class Dron : public Figura_geo
      * \brief Pole obrotu drona wzgledem oryginalnego polozenia
      **/
     Wektor3D obrot = Wektor3D(0,0,0);
+
+    Wirnik wir_prawy, wir_lewy;
 
     public:
     Dron():Figura_geo() {};

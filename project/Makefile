@@ -5,8 +5,8 @@ TRGDIR=/tmp/rysowanie_3D
 __start__: ./rysowanie_3D
 	./rysowanie_3D
 
-./rysowanie_3D: obj obj/main.o obj/lacze_do_gnuplota.o obj/scena.o obj/dno.o obj/woda.o obj/wektor3D.o obj/powierzchnia.o obj/dron.o obj/figura_geo.o obj/macierz3D.o obj/menu.o
-	g++ -Wall -g -pedantic -o ./rysowanie_3D obj/main.o obj/lacze_do_gnuplota.o obj/scena.o obj/dno.o obj/woda.o obj/wektor3D.o obj/powierzchnia.o obj/dron.o obj/figura_geo.o obj/macierz3D.o obj/menu.o
+./rysowanie_3D: obj obj/main.o obj/lacze_do_gnuplota.o obj/scena.o obj/dno.o obj/woda.o obj/wektor3D.o obj/powierzchnia.o obj/dron.o obj/wirnik.o obj/figura_geo.o obj/macierz3D.o obj/menu.o
+	g++ -Wall -g -pedantic -o ./rysowanie_3D obj/main.o obj/lacze_do_gnuplota.o obj/scena.o obj/dno.o obj/woda.o obj/wektor3D.o obj/powierzchnia.o obj/dron.o obj/wirnik.o obj/figura_geo.o obj/macierz3D.o obj/menu.o
 
 obj:
 	mkdir -p obj
@@ -22,6 +22,9 @@ obj/main.o: src/main.cpp inc/lacze_do_gnuplota.hh inc/scena.hh inc/dron.hh
 
 obj/dron.o: src/dron.cpp inc/dron.hh inc/figura_geo.hh inc/macierz3D.hh
 	g++ -c ${CXXFLAGS} -o obj/dron.o src/dron.cpp
+
+obj/wirnik.o: src/wirnik.cpp inc/wirnik.hh inc/figura_geo.hh inc/wektor3D.hh
+	g++ -c ${CXXFLAGS} -o obj/wirnik.o src/wirnik.cpp
 
 obj/scena.o: src/scena.cpp inc/scena.hh inc/woda.hh inc/dno.hh 
 	g++ -c ${CXXFLAGS} -o obj/scena.o src/scena.cpp
