@@ -34,7 +34,7 @@ void inicjalizuj_lacze(PzG::LaczeDoGNUPlota & Lacze)
 bool menu()
 {
     char znak = 'm';
-    std::ofstream Plik;
+    ofstream Plik;
 
     PzG::LaczeDoGNUPlota Lacze;
     inicjalizuj_lacze(Lacze);
@@ -96,7 +96,7 @@ bool menu()
             {
                 std::cout << "Podaj wartosc kata obrotu wokol osi Z" << std::endl;
                 std::cout << "Twoj wybor> ";
-                double kat;
+                int kat;
                 std::cin >> kat;
                 if(std::cin.fail())
                 {
