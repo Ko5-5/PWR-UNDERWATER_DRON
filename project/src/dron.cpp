@@ -106,18 +106,18 @@ void Dron::translacja_glob()
         Macierz3D mac_obrot = Macierz3D(Wektor3D(1,0,0),Wektor3D(0,cos(kat_rad),-sin(kat_rad)),Wektor3D(0,sin(kat_rad),cos(kat_rad)));
         for(int i=0; i<(tablica.size()); i++)
         {
-            temp = translacja + wir_prawy.translacja() + mac_obrot*wir_prawy.tablica[i];
+            temp = translacja + wir_prawy.translacja() + mac_obrot*wir_prawy.uk_lok()[i];
             //std::cout << temp << std::endl;
-            wir_prawy.tablica_glob.push_back(temp);
+            wir_prawy.uk_glob().push_back(temp);
             //std::cout << tablica_glob[i] << std::endl;
         }
         kat_rad = (wir_lewy[4]/180) * (M_PI);
         mac_obrot = Macierz3D(Wektor3D(1,0,0),Wektor3D(0,cos(kat_rad),-sin(kat_rad)),Wektor3D(0,sin(kat_rad),cos(kat_rad)));
         for(int i=0; i<(tablica.size()); i++)
         {
-            temp = translacja + wir_lewy.translacja() + mac_obrot*wir_lewy.tablica[i];
+            temp = translacja + wir_lewy.translacja() + mac_obrot*wir_lewy.uk_lok()[i];
             //std::cout << temp << std::endl;
-            wir_lewy.tablica_glob.push_back(temp);
+            wir_lewy.uk_glob().push_back(temp);
             //std::cout << tablica_glob[i] << std::endl;
         }
     }
