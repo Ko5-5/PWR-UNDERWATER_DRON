@@ -73,6 +73,8 @@ bool menu()
                     Lacze.UstawZakresY(scena()[Y]-OTOCZENIE_DRONA,scena()[Y]+OTOCZENIE_DRONA);
                     scena.generuj_dno_woda(scena()[X]-OTOCZENIE_DRONA,scena()[X]+OTOCZENIE_DRONA,scena()[Y]-OTOCZENIE_DRONA,scena()[Y]+OTOCZENIE_DRONA);
                     scena().ruch_przod_kat(1,kat);
+                    scena()(PRAWY).obrot_prawa(1);
+                    scena()(LEWY).obrot_lewa(1);
                     scena().translacja_glob();
                     if(!scena.zapisz_plik(Plik))
                     {
@@ -108,7 +110,6 @@ bool menu()
                     {
                         scena().obrot_kat (1);
                         scena()(PRAWY).obrot_prawa(1);
-                        std::cout << scena()(PRAWY)[4] << std::endl;
                     }
                     else
                     {
