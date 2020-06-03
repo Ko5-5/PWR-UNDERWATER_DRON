@@ -146,7 +146,12 @@ std::ostream & operator << (std::ostream & strm, Dron & tab)
         }
     }
 
+    strm << std::endl;
+
     strm << tab(LEWY) << std::endl;
+
+    strm << std::endl << std::endl;
+
     strm << tab(PRAWY) << std::endl;
 
     strm << std::endl;
