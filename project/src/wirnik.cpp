@@ -23,14 +23,14 @@ Wirnik::Wirnik(Wirnik & wir, int pos)
     if(pos==2) translacja_lok_dron = Wektor3D(5,-6,-5);
 }
 
-void Wirnik::obrot_lewa(double kat)
+void Wirnik::obrot_lewa(double kat_obr)
 {
-    kat -= kat;
+    kat -= kat_obr;
 }
 
-void Wirnik::obrot_prawa(double kat)
+void Wirnik::obrot_prawa(double kat_obr)
 {
-    kat += kat;
+    kat += kat_obr;
 }
 
 std::ostream & operator << (std::ostream & Strm, Wirnik & tab)

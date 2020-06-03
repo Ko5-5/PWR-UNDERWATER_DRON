@@ -107,10 +107,13 @@ bool menu()
                     if(kat>0)
                     {
                         scena().obrot_kat (1);
+                        scena()(PRAWY).obrot_prawa(1);
+                        std::cout << scena()(PRAWY)[4] << std::endl;
                     }
                     else
                     {
                         scena().obrot_kat (-1);
+                        scena()(LEWY).obrot_lewa(1);
                     }
                     scena().translacja_glob();
                     if(!scena.zapisz_plik(Plik))

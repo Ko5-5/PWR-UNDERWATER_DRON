@@ -161,14 +161,9 @@ std::ostream & operator << (std::ostream & strm, Dron & tab)
     }
 
     strm << std::endl << std::endl;
-    strm << "wir";
-    std::cout << tab(LEWY) << std::endl;
     strm << tab(LEWY) << std::endl;
-    
     strm << std::endl << std::endl;
-
     strm << tab(PRAWY) << std::endl;
-
     strm << std::endl;
 
     return strm;

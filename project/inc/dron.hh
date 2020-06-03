@@ -44,10 +44,10 @@ class Dron : public Figura_geo
         }
 
         std::ifstream plik_wir;
-        plik_wir.open("bryly/wirniki-dron-lok.dat");
+        plik_wir.open("bryly/wirniki-dron-lok1.dat");
         wir_lewy = Wirnik(plik_wir,LEWY);
         plik_wir.close();
-        plik_wir.open("bryly/wirniki-dron-lok.dat");
+        plik_wir.open("bryly/wirniki-dron-lok2.dat");
         wir_prawy = Wirnik(plik_wir,PRAWY);
         plik_wir.close();
     }
