@@ -2,13 +2,14 @@
 #define WIRNIK_HH
 
 #include <iostream>
+#include <fstream>
 #include "figura_geo.hh"
 
 class Wirnik : public Figura_geo
 {
     private:
     Wektor3D translacja_lok_dron;
-    double kat;
+    double kat = 0;
 
     public:
     Wirnik() {};

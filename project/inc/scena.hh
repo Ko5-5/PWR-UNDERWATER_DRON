@@ -24,7 +24,7 @@ class Scena
      * \param[in] y_0 - poczatek zakresu y
      * \param[in] y - koniec zakresu y
      **/
-    Scena(int x_0, int x, int y_0, int y, std::ifstream & plik_wej) {dno_obj = new Dno(x_0,x,y_0,y); woda_obj = new Woda(x_0,x,y_0,y); dron_obj=Dron(plik_wej);}
+    Scena(int x_0, int x, int y_0, int y);
 
     Dron & operator () () {return dron_obj;}
     /**

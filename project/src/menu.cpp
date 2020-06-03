@@ -35,13 +35,11 @@ bool menu()
 {
     char znak = 'm';
     ofstream Plik;
-    ifstream Plik_dron;
-    Plik_dron.open("bryly/dron-lok.dat");
 
     PzG::LaczeDoGNUPlota Lacze;
     inicjalizuj_lacze(Lacze);
 
-    Scena scena = Scena(0,70,0,70, Plik_dron);
+    Scena scena = Scena(0,70,0,70);
 
     while(znak!='k')
     {

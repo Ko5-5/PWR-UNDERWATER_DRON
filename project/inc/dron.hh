@@ -2,6 +2,7 @@
 #define DRON_HH
 
 #include <cmath>
+#include <fstream>
 #include "figura_geo.hh"
 #include "macierz3D.hh"
 #include "wirnik.hh"
@@ -41,6 +42,12 @@ class Dron : public Figura_geo
                 tablica.push_back(temp);
             }
         }
+
+        std::ifstream plik_wir;
+        plik_wir.open("bryly/wirniki-dron-lok.dat");
+        wir_prawy = Wirnik(plik_wir,PRAWY);
+        wir_lewy = Wirnik(plik_wir,LEWY);
+        plik_wir.close();
     }
 
     /**
