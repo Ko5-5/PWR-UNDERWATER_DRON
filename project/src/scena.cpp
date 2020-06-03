@@ -35,7 +35,12 @@ bool Scena::zapisz_plik(std::ofstream & plik_wyj)
         wynik = false;
         std::cerr << "Blad zapisu obiektu woda do pliku" << std::endl;
     }
-    dron_obj.zapisz_plik(plik_wyj);
+    plik_wyj << dron_obj;
+    if (plik_wyj.fail())
+    {
+        wynik = false;
+        std::cerr << "Blad zapisu obiektu dron do pliku" << std::endl;
+    }
     
     return wynik;
 }

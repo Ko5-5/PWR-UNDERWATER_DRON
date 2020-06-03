@@ -49,6 +49,8 @@ void Dron::ruch_przod_kat(int il_krok, double kat)
 void Dron::translacja_glob()
 {
     tablica_glob.clear();
+    wir_lewy.uk_glob().clear();
+    wir_prawy.uk_glob().clear();
 
     if(obrot[Z]!=0)
     {
@@ -66,10 +68,10 @@ void Dron::translacja_glob()
         if(obrot[Z]>0)
         {
             kat_rad = (wir_prawy[4]/180) * (M_PI);
-            mac_obrot = Macierz3D(Wektor3D(1,0,0),Wektor3D(0,cos(kat_rad),-sin(kat_rad)),Wektor3D(0,sin(kat_rad),cos(kat_rad)));
-            for(int i=0; i<(tablica.size()); i++)
+            Macierz3D mac_obrot_wir = Macierz3D(Wektor3D(1,0,0),Wektor3D(0,cos(kat_rad),-sin(kat_rad)),Wektor3D(0,sin(kat_rad),cos(kat_rad)));
+            for(int i=0; i<(wir_prawy.uk_lok().size()); i++)
             {
-                temp = translacja + wir_prawy.translacja() + mac_obrot*wir_prawy.uk_lok()[i];
+                temp = translacja + wir_prawy.translacja() + mac_obrot*(mac_obrot_wir*wir_prawy.uk_lok()[i]);
                 //std::cout << temp << std::endl;
                 wir_prawy.uk_glob().push_back(temp);
                 //std::cout << tablica_glob[i] << std::endl;
@@ -78,10 +80,10 @@ void Dron::translacja_glob()
         else
         {
             kat_rad = (wir_lewy[4]/180) * (M_PI);
-            mac_obrot = Macierz3D(Wektor3D(1,0,0),Wektor3D(0,cos(kat_rad),-sin(kat_rad)),Wektor3D(0,sin(kat_rad),cos(kat_rad)));
-            for(int i=0; i<(tablica.size()); i++)
+            Macierz3D mac_obrot_wir = Macierz3D(Wektor3D(1,0,0),Wektor3D(0,cos(kat_rad),-sin(kat_rad)),Wektor3D(0,sin(kat_rad),cos(kat_rad)));
+            for(int i=0; i<(wir_lewy.uk_lok().size()); i++)
             {
-                temp = translacja + wir_lewy.translacja() + mac_obrot*wir_lewy.uk_lok()[i];
+                temp = translacja + wir_lewy.translacja() + mac_obrot*(mac_obrot_wir*wir_lewy.uk_lok()[i]);
                 //std::cout << temp << std::endl;
                 wir_lewy.uk_glob().push_back(temp);
                 //std::cout << tablica_glob[i] << std::endl;
@@ -104,7 +106,7 @@ void Dron::translacja_glob()
         Wektor3D temp = Wektor3D(0,0,0);
         double kat_rad = (wir_prawy[4]/180) * (M_PI);
         Macierz3D mac_obrot = Macierz3D(Wektor3D(1,0,0),Wektor3D(0,cos(kat_rad),-sin(kat_rad)),Wektor3D(0,sin(kat_rad),cos(kat_rad)));
-        for(int i=0; i<(tablica.size()); i++)
+        for(int i=0; i<(wir_prawy.uk_lok().size()); i++)
         {
             temp = translacja + wir_prawy.translacja() + mac_obrot*wir_prawy.uk_lok()[i];
             //std::cout << temp << std::endl;
@@ -113,7 +115,7 @@ void Dron::translacja_glob()
         }
         kat_rad = (wir_lewy[4]/180) * (M_PI);
         mac_obrot = Macierz3D(Wektor3D(1,0,0),Wektor3D(0,cos(kat_rad),-sin(kat_rad)),Wektor3D(0,sin(kat_rad),cos(kat_rad)));
-        for(int i=0; i<(tablica.size()); i++)
+        for(int i=0; i<(wir_lewy.uk_lok().size()); i++)
         {
             temp = translacja + wir_lewy.translacja() + mac_obrot*wir_lewy.uk_lok()[i];
             //std::cout << temp << std::endl;
@@ -128,3 +130,28 @@ void Dron::obrot_kat (double kat)
     obrot[Z]+=kat;
 }
 
+std::ostream & operator << (std::ostream & strm, const Dron & tab)
+{
+    for(int i=0; i<(tab.tablica.size()); i++)
+    {
+        if(i%4==0 && i!=0)
+        {
+            strm << std::endl;
+        }
+        strm << tab.tablica_glob[i] << std::endl;
+        if(strm.fail())
+        {
+            std::cerr << "Blad zapisu drona do pliku" << std::endl;
+            return strm;
+        }
+    }
+
+    strm << std::endl;
+
+    strm << tab(LEWY) << std::endl;
+    strm << tab(PRAWY) << std::endl;
+
+    strm << std::endl;
+
+    return strm;
+}

@@ -14,6 +14,7 @@ Figura_geo::Figura_geo(std::ifstream & plik_wej)
     }
 }
 
+/*
 bool Figura_geo::zapisz_plik(std::ostream & plik_wyj)
 {
     for(int i=0; i<(tablica.size()); i++)
@@ -34,4 +35,4 @@ bool Figura_geo::zapisz_plik(std::ostream & plik_wyj)
 
     return true;
 }
-
+*/

@@ -18,14 +18,19 @@ class Wirnik : public Figura_geo
     double & operator [] (unsigned int size) {if(size<4) return translacja_lok_dron[size]; else return kat;}
     double operator [] (unsigned int size) const {if(size<4) return translacja_lok_dron[size]; else return kat;}
 
-    Wektor3D translacja () {return translacja_lok_dron;}
+    Wektor3D & translacja () {return translacja_lok_dron;}
+    Wektor3D translacja () const {return translacja_lok_dron;}
 
     std::vector<Wektor3D> & uk_lok() {return tablica;}
+    std::vector<Wektor3D> uk_lok() const {return tablica;}
 
     std::vector<Wektor3D> & uk_glob() {return tablica_glob;}
+    std::vector<Wektor3D> uk_glob() const {return tablica_glob;}
 
     void obrot_lewa(double kat);
     void obrot_prawa(double kat);
 };
+
+std::ostream & operator << (std::ostream & Strm, Wirnik & tab);
 
 #endif

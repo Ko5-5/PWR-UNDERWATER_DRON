@@ -64,6 +64,10 @@ class Dron : public Figura_geo
      **/
     double operator [] (unsigned int size) const {return translacja[size];}
 
+    Wirnik & operator () (unsigned int size) {if(size==LEWY) return wir_lewy; else return wir_prawy;}
+
+    Wirnik operator () (unsigned int size) const {if(size==LEWY) return wir_lewy; else return wir_prawy;}
+
     /**
      * \brief Realizuje translacje ukladu lokalnego do globalnego
      **/
@@ -84,5 +88,7 @@ class Dron : public Figura_geo
     void obrot_kat(double kat);
 
 };
+
+std::ostream & operator << (std::ostream & strm, const Dron & tab);
 
 #endif

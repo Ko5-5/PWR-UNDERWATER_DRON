@@ -25,3 +25,24 @@ void Wirnik::obrot_prawa(double kat)
 {
     kat += kat;
 }
+
+std::ostream & operator << (std::ostream & Strm, Wirnik & tab)
+{
+    for(int i=0; i<(tab.tablica_glob.size()); i++)
+    {
+        if(i%4==0 && i!=0)
+        {
+            Strm << std::endl;
+        }
+        Strm << tab.uk_glob()[i] << std::endl;
+        if(Strm.fail())
+        {
+            std::cerr << "Blad zapisu figury geometrycznej do pliku" << std::endl;
+            return Strm;
+        }
+    }
+
+    Strm << std::endl;
+
+    return Strm;
+}
