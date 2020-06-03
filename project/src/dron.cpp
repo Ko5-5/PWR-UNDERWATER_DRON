@@ -2,15 +2,15 @@
 
 void Dron::ruch_przod_kat(int il_krok, double kat)
 {
-    double kat_rad = (kat/180.0) * (M_PI);
+    double kat_rad = (kat/180) * (M_PI);
 
     translacja[Z] += il_krok * sin(kat_rad);
 
-
+    
     //std::cout << translacja[Z] << std::endl;
     
-    
-    switch(obrot)
+    /*
+    switch((int)obrot[Z])
     {
         case 0:
         {
@@ -40,11 +40,11 @@ void Dron::ruch_przod_kat(int il_krok, double kat)
 
         default:
         {
-            translacja[X] += (il_krok * cos(kat_rad))*(sin(obrot));
-            translacja[Y] += (il_krok * cos(kat_rad))*(cos(obrot));
+            translacja[X] += (il_krok * cos(kat_rad))*(sin(obrot[Z]));
+            translacja[Y] += (il_krok * cos(kat_rad))*(cos(obrot[Z]));
         }
     }
-/*
+    */
    if(obrot>90 && obrot<(-90))
    {
        translacja[X] -= (il_krok * cos(kat_rad))*(sin(obrot));
@@ -55,9 +55,9 @@ void Dron::ruch_przod_kat(int il_krok, double kat)
        translacja[X] += (il_krok * cos(kat_rad))*(sin(obrot));
        translacja[Y] += (il_krok * cos(kat_rad))*(cos(obrot));
    }
-*/
+
     //std::cout << translacja[Y] << std::endl;
- 
+    
 }
 
 void Dron::translacja_glob()
@@ -153,7 +153,7 @@ void Dron::translacja_glob()
     }
 }
 
-void Dron::obrot_kat (double kat)
+void Dron::obrot_kat (int kat)
 {
     obrot+=kat;
 }

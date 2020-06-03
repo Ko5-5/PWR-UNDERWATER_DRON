@@ -66,9 +66,9 @@ class Dron : public Figura_geo
      **/
     double operator [] (unsigned int size) const {return translacja[size];}
 
-    Wirnik & operator () (unsigned int size) {if(size==LEWY) return wir_lewy; if(size==PRAWY) return wir_prawy;}
+    Wirnik & operator () (unsigned int size) {if(size==LEWY) return wir_lewy; else return wir_prawy;}
 
-    Wirnik operator () (unsigned int size) const {if(size==LEWY) return wir_lewy; if(size==PRAWY) return wir_prawy;}
+    Wirnik operator () (unsigned int size) const {if(size==LEWY) return wir_lewy; else return wir_prawy;}
 
     /**
      * \brief Realizuje translacje ukladu lokalnego do globalnego
@@ -87,7 +87,7 @@ class Dron : public Figura_geo
      * \param[in] os - os obrotu
      * \param[in] kat - kat obrotu
      **/
-    void obrot_kat(double kat);
+    void obrot_kat(int kat);
 
 };
 

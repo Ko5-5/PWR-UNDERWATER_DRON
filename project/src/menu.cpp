@@ -96,7 +96,7 @@ bool menu()
             {
                 std::cout << "Podaj wartosc kata obrotu wokol osi Z" << std::endl;
                 std::cout << "Twoj wybor> ";
-                double kat;
+                int kat;
                 std::cin >> kat;
                 if(std::cin.fail())
                 {
