@@ -14,7 +14,7 @@ Macierz3D::Macierz3D(Wektor3D pos_0, Wektor3D pos_1, Wektor3D pos_2)
     (*this)[2] = pos_2;
 }
 
-Wektor3D Macierz3D::operator * (Wektor3D & wek)
+Wektor3D Macierz3D::operator * (Wektor3D wek)
 {
     Wektor3D temp = Wektor3D(0,0,0);
 

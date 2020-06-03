@@ -28,7 +28,7 @@ class Macierz3D : public Macierz<double,3>
      * \param[in] wek - wektor przez ktory sie mnozy
      * \return Wektor bedacy iloczynem macierzy i wektora
      **/
-    Wektor3D operator * (Wektor3D & wek);
+    Wektor3D operator * (Wektor3D wek);
 };
 
 #endif
