@@ -71,7 +71,7 @@ void Dron::translacja_glob()
             {
                 temp = translacja + wir_prawy.translacja() + mac_obrot*wir_prawy.uk_lok()[i];
                 //std::cout << temp << std::endl;
-                wir_prawy.tablica_glob.push_back(temp);
+                wir_prawy.uk_glob().push_back(temp);
                 //std::cout << tablica_glob[i] << std::endl;
             }
         }
@@ -83,7 +83,7 @@ void Dron::translacja_glob()
             {
                 temp = translacja + wir_lewy.translacja() + mac_obrot*wir_lewy.uk_lok()[i];
                 //std::cout << temp << std::endl;
-                wir_lewy.tablica_glob.push_back(temp);
+                wir_lewy.uk_glob().push_back(temp);
                 //std::cout << tablica_glob[i] << std::endl;
             }
         }

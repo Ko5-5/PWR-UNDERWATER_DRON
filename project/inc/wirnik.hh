@@ -20,7 +20,9 @@ class Wirnik : public Figura_geo
 
     Wektor3D translacja () {return translacja_lok_dron;}
 
-    std::vector<Wektor3D> uk_lok() {return tablica;}
+    std::vector<Wektor3D> & uk_lok() {return tablica;}
+
+    std::vector<Wektor3D> & uk_glob() {return tablica_glob;}
 
     void obrot_lewa(double kat);
     void obrot_prawa(double kat);
