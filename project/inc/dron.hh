@@ -21,7 +21,11 @@ class Dron : public Figura_geo
     /**
      * \brief Pole obrotu drona wzgledem oryginalnego polozenia
      **/
+<<<<<<< HEAD
     double obrot = 0.00;
+=======
+    Wektor3D obrot = Wektor3D(0,0,0);
+>>>>>>> parent of d728b0a... seg fault
 
     Wirnik wir_prawy, wir_lewy;
 
