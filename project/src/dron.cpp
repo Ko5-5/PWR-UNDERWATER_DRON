@@ -2,12 +2,15 @@
 
 void Dron::ruch_przod_kat(int il_krok, double kat)
 {
-    double kat_rad = (kat/180) * (M_PI);
+    double kat_rad = (kat/180.0) * (M_PI);
 
     translacja[Z] += il_krok * sin(kat_rad);
+
+
     //std::cout << translacja[Z] << std::endl;
     
-    switch((int)obrot[Z])
+    
+    switch(obrot)
     {
         case 0:
         {
@@ -37,13 +40,24 @@ void Dron::ruch_przod_kat(int il_krok, double kat)
 
         default:
         {
-            translacja[X] += (il_krok * cos(kat_rad))*(sin(obrot[Z]));
-            translacja[Y] += (il_krok * cos(kat_rad))*(cos(obrot[Z]));
+            translacja[X] += (il_krok * cos(kat_rad))*(sin(obrot));
+            translacja[Y] += (il_krok * cos(kat_rad))*(cos(obrot));
         }
     }
-
+/*
+   if(obrot>90 && obrot<(-90))
+   {
+       translacja[X] -= (il_krok * cos(kat_rad))*(sin(obrot));
+       translacja[Y] -= (il_krok * cos(kat_rad))*(cos(obrot));
+   }
+   if(obrot<90 && obrot>(-90))
+   {
+       translacja[X] += (il_krok * cos(kat_rad))*(sin(obrot));
+       translacja[Y] += (il_krok * cos(kat_rad))*(cos(obrot));
+   }
+*/
     //std::cout << translacja[Y] << std::endl;
-    
+ 
 }
 
 void Dron::translacja_glob()
@@ -52,9 +66,9 @@ void Dron::translacja_glob()
     wir_lewy.uk_glob().clear();
     wir_prawy.uk_glob().clear();
 
-    if(obrot[Z]!=0)
+    if(obrot!=0)
     {
-        double kat_rad = (obrot[Z]/180) * (M_PI);
+        double kat_rad = (obrot/180) * (M_PI);
         Wektor3D temp = Wektor3D(0,0,0);
         Macierz3D mac_obrot = Macierz3D(Wektor3D(cos(kat_rad),-sin(kat_rad),0),Wektor3D(sin(kat_rad),cos(kat_rad),0),Wektor3D(0,0,1));
         //std::cout << mac_obrot << std::endl;
@@ -65,7 +79,7 @@ void Dron::translacja_glob()
             tablica_glob.push_back(temp);
             //std::cout << tablica_glob[i] << std::endl;
         }
-        if(obrot[Z]>0)
+        if(obrot>0)
         {
             kat_rad = (wir_prawy[4]/180) * (M_PI);
             Macierz3D mac_obrot_wir = Macierz3D(Wektor3D(cos(kat_rad),0,sin(kat_rad)),Wektor3D(0,1,0),Wektor3D(-sin(kat_rad),0,cos(kat_rad)));
@@ -141,7 +155,7 @@ void Dron::translacja_glob()
 
 void Dron::obrot_kat (double kat)
 {
-    obrot[Z]+=kat;
+    obrot+=kat;
 }
 
 std::ostream & operator << (std::ostream & strm, Dron & tab)
