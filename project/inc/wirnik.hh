@@ -8,12 +8,13 @@
 class Wirnik : public Figura_geo
 {
     private:
-    Wektor3D translacja_lok_dron;
-    double kat = 0;
+    Wektor3D translacja_lok_dron = Wektor3D(0,-6,-5);
+    double kat = 0.00;
 
     public:
     Wirnik() {};
     Wirnik(std::ifstream & plik_wej, int poz);
+    Wirnik(Wirnik & wir, int pos);
 
     double & operator [] (unsigned int size) {if(size<4) return translacja_lok_dron[size]; else return kat;}
     double operator [] (unsigned int size) const {if(size<4) return translacja_lok_dron[size]; else return kat;}

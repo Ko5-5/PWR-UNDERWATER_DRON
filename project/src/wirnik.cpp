@@ -16,6 +16,13 @@ Wirnik::Wirnik(std::ifstream & plik_wej, int pos)
     if(pos==2) translacja_lok_dron = Wektor3D(5,-6,-5);
 }
 
+Wirnik::Wirnik(Wirnik & wir, int pos)
+{
+    tablica = wir.tablica;
+    if(pos==1) translacja_lok_dron = Wektor3D(-5,-6,-5);
+    if(pos==2) translacja_lok_dron = Wektor3D(5,-6,-5);
+}
+
 void Wirnik::obrot_lewa(double kat)
 {
     kat -= kat;

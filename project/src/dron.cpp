@@ -76,11 +76,25 @@ void Dron::translacja_glob()
                 wir_prawy.uk_glob().push_back(temp);
                 //std::cout << tablica_glob[i] << std::endl;
             }
+            for(int i=0; i<(wir_lewy.uk_lok().size()); i++)
+            {
+                temp = translacja + mac_obrot*(wir_lewy.translacja() + wir_lewy.uk_lok()[i]);
+                //std::cout << temp << std::endl;
+                wir_lewy.uk_glob().push_back(temp);
+                //std::cout << tablica_glob[i] << std::endl;
+            }
         }
         else
         {
             kat_rad = (wir_lewy[4]/180) * (M_PI);
             Macierz3D mac_obrot_wir = Macierz3D(Wektor3D(1,0,0),Wektor3D(0,cos(kat_rad),-sin(kat_rad)),Wektor3D(0,sin(kat_rad),cos(kat_rad)));
+            for(int i=0; i<(wir_prawy.uk_lok().size()); i++)
+            {
+                temp = translacja + mac_obrot*(wir_prawy.translacja() + wir_prawy.uk_lok()[i]);
+                //std::cout << temp << std::endl;
+                wir_prawy.uk_glob().push_back(temp);
+                //std::cout << tablica_glob[i] << std::endl;
+            }
             for(int i=0; i<(wir_lewy.uk_lok().size()); i++)
             {
                 temp = translacja + mac_obrot*(wir_lewy.translacja() + mac_obrot_wir*wir_lewy.uk_lok()[i]);
@@ -147,9 +161,10 @@ std::ostream & operator << (std::ostream & strm, Dron & tab)
     }
 
     strm << std::endl << std::endl;
-
+    strm << "wir";
+    std::cout << tab(LEWY) << std::endl;
     strm << tab(LEWY) << std::endl;
-
+    
     strm << std::endl << std::endl;
 
     strm << tab(PRAWY) << std::endl;
