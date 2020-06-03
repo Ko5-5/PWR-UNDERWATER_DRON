@@ -21,7 +21,7 @@ class Dron : public Figura_geo
     /**
      * \brief Pole obrotu drona wzgledem oryginalnego polozenia
      **/
-    int obrot = 0;
+    double obrot = 0.00;
 
     Wirnik wir_prawy, wir_lewy;
 

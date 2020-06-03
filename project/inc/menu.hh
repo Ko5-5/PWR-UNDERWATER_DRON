@@ -3,6 +3,7 @@
 
 #include <iomanip>
 #include <fstream>
+#include <ostream>
 #include <cstdlib>
 #include <cmath>
 #include <unistd.h>
