@@ -5,16 +5,11 @@ void Dron::ruch_przod_kat(int il_krok, double kat)
     double kat_rad = (kat/180) * (M_PI);
 
     translacja[Z] += il_krok * sin(kat_rad);
-<<<<<<< HEAD
-    
+
     //std::cout << translacja[Z] << std::endl;
     
     /*
-=======
-    //std::cout << translacja[Z] << std::endl;
-    
->>>>>>> parent of d728b0a... seg fault
-    switch((int)obrot[Z])
+    switch((int)obrot[Z][Z])
     {
         case 0:
         {
@@ -44,24 +39,21 @@ void Dron::ruch_przod_kat(int il_krok, double kat)
 
         default:
         {
-            translacja[X] += (il_krok * cos(kat_rad))*(sin(obrot[Z]));
-            translacja[Y] += (il_krok * cos(kat_rad))*(cos(obrot[Z]));
+            translacja[X] += (il_krok * cos(kat_rad))*(sin(obrot[Z][Z]));
+            translacja[Y] += (il_krok * cos(kat_rad))*(cos(obrot[Z][Z]));
         }
     }
-<<<<<<< HEAD
     */
-   if(obrot>90 && obrot<(-90))
+   if(obrot[Z]>90 && obrot[Z]<(-90))
    {
-       translacja[X] -= (il_krok * cos(kat_rad))*(sin(obrot));
-       translacja[Y] -= (il_krok * cos(kat_rad))*(cos(obrot));
+       translacja[X] -= (il_krok * cos(kat_rad))*(sin(obrot[Z]));
+       translacja[Y] -= (il_krok * cos(kat_rad))*(cos(obrot[Z]));
    }
-   if(obrot<90 && obrot>(-90))
+   if(obrot[Z]<90 && obrot[Z]>(-90))
    {
-       translacja[X] += (il_krok * cos(kat_rad))*(sin(obrot));
-       translacja[Y] += (il_krok * cos(kat_rad))*(cos(obrot));
+       translacja[X] += (il_krok * cos(kat_rad))*(sin(obrot[Z]));
+       translacja[Y] += (il_krok * cos(kat_rad))*(cos(obrot[Z]));
    }
-=======
->>>>>>> parent of d728b0a... seg fault
 
     //std::cout << translacja[Y] << std::endl;
     
@@ -78,7 +70,7 @@ void Dron::translacja_glob()
         double kat_rad = (obrot[Z]/180) * (M_PI);
         Wektor3D temp = Wektor3D(0,0,0);
         Macierz3D mac_obrot = Macierz3D(Wektor3D(cos(kat_rad),-sin(kat_rad),0),Wektor3D(sin(kat_rad),cos(kat_rad),0),Wektor3D(0,0,1));
-        //std::cout << mac_obrot << std::endl;
+        //std::cout << mac_obrot[Z] << std::endl;
         for(int i=0; i<(tablica.size()); i++)
         {
             temp = translacja + mac_obrot*tablica[i];
