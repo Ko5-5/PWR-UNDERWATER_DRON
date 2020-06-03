@@ -129,7 +129,7 @@ void Dron::translacja_glob()
     {    
         for(int i=0; i<(tablica.size()); i++)
         {
-            if(translacja[Z]+tablica[i][Z]>POZ_WOD-1)
+            if(translacja[Z]+tablica[i][Z]>POZ_WOD)
             {
                 tablica_glob.push_back(Wektor3D(translacja[X]+tablica[i][X],translacja[Y]+tablica[i][Y],POZ_WOD+1));
             }
