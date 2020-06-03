@@ -61,9 +61,9 @@ bool menu()
                     std::cerr << "Blad wczytywania wartosci ruchu" << std::endl;
                     exit(1);
                 }
-                while(kat>90)
+                while(kat>89 || kat<(-89))
                 {
-                    std::cout << "Podany zly kat ruchu, podaj kat z zakresu -90/90" << std::endl;
+                    std::cout << "Podany zly kat ruchu, podaj kat z zakresu -89/89" << std::endl;
                     std::cin >> kat;
                 }
                 for(int i=0; i<krok; i++)

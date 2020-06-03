@@ -6,56 +6,10 @@ void Dron::ruch_przod_kat(int il_krok, double kat)
 
     translacja[Z] += il_krok * sin(kat_rad);
 
-    //std::cout << translacja[Z] << std::endl;
-    
-    /*
-    switch((int)obrot[Z][Z])
-    {
-        case 0:
-        {
-            translacja[Y] += il_krok * cos(kat_rad);
-            break;
-        }
-        case 180:
-        {
-            translacja[Y] -= il_krok * cos(kat_rad);
-            break;
-        }
-        case -180:
-        {
-            translacja[Y] -= il_krok * cos(kat_rad);
-            break;
-        }
-        case 90:
-        {
-            translacja[X] -= il_krok * cos(kat_rad);
-            break;
-        }
-        case -90:
-        {
-            translacja[X] += il_krok * cos(kat_rad);
-            break;
-        }
+    translacja[X] += (il_krok * cos(kat_rad))*(-sin(obrot[Z]));
+    translacja[Y] += (il_krok * cos(kat_rad))*(cos(obrot[Z]));
 
-        default:
-        {
-            translacja[X] += (il_krok * cos(kat_rad))*(sin(obrot[Z][Z]));
-            translacja[Y] += (il_krok * cos(kat_rad))*(cos(obrot[Z][Z]));
-        }
-    }
-    */
-   if(obrot[Z]>90 && obrot[Z]<(-90))
-   {
-       translacja[X] -= (il_krok * cos(kat_rad))*(sin(obrot[Z]));
-       translacja[Y] -= (il_krok * cos(kat_rad))*(cos(obrot[Z]));
-   }
-   if(obrot[Z]<90 && obrot[Z]>(-90))
-   {
-       translacja[X] += (il_krok * cos(kat_rad))*(sin(obrot[Z]));
-       translacja[Y] += (il_krok * cos(kat_rad))*(cos(obrot[Z]));
-   }
 
-    //std::cout << translacja[Y] << std::endl;
     
 }
 
