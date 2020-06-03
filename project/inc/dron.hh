@@ -45,8 +45,10 @@ class Dron : public Figura_geo
 
         std::ifstream plik_wir;
         plik_wir.open("bryly/wirniki-dron-lok.dat");
-        wir_prawy = Wirnik(plik_wir,PRAWY);
         wir_lewy = Wirnik(plik_wir,LEWY);
+        plik_wir.close();
+        plik_wir.open("bryly/wirniki-dron-lok.dat");
+        wir_prawy = Wirnik(plik_wir,PRAWY);
         plik_wir.close();
     }
 
@@ -89,6 +91,6 @@ class Dron : public Figura_geo
 
 };
 
-std::ostream & operator << (std::ostream & strm, const Dron & tab);
+std::ostream & operator << (std::ostream & strm, Dron & tab);
 
 #endif

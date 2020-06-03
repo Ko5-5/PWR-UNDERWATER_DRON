@@ -12,8 +12,8 @@ Wirnik::Wirnik(std::ifstream & plik_wej, int pos)
         }
     }
 
-    if(pos==1) translacja_lok_dron = Wektor3D(0,-5,5);
-    if(pos==2) translacja_lok_dron = Wektor3D(0,5,5);
+    if(pos==1) translacja_lok_dron = Wektor3D(-6,-6,-5);
+    if(pos==2) translacja_lok_dron = Wektor3D(6,-6,-5);
 }
 
 void Wirnik::obrot_lewa(double kat)
@@ -28,7 +28,7 @@ void Wirnik::obrot_prawa(double kat)
 
 std::ostream & operator << (std::ostream & Strm, Wirnik & tab)
 {
-    for(int i=0; i<(tab.tablica_glob.size()); i++)
+    for(int i=0; i<(tab.uk_lok().size()); i++)
     {
         if(i%4==0 && i!=0)
         {
@@ -37,7 +37,7 @@ std::ostream & operator << (std::ostream & Strm, Wirnik & tab)
         Strm << tab.uk_glob()[i] << std::endl;
         if(Strm.fail())
         {
-            std::cerr << "Blad zapisu figury geometrycznej do pliku" << std::endl;
+            std::cerr << "Blad zapisu wirnika do pliku" << std::endl;
             return Strm;
         }
     }

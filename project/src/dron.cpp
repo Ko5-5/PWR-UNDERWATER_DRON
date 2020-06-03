@@ -130,7 +130,7 @@ void Dron::obrot_kat (double kat)
     obrot[Z]+=kat;
 }
 
-std::ostream & operator << (std::ostream & strm, const Dron & tab)
+std::ostream & operator << (std::ostream & strm, Dron & tab)
 {
     for(int i=0; i<(tab.tablica.size()); i++)
     {
@@ -145,8 +145,6 @@ std::ostream & operator << (std::ostream & strm, const Dron & tab)
             return strm;
         }
     }
-
-    strm << std::endl;
 
     strm << tab(LEWY) << std::endl;
     strm << tab(PRAWY) << std::endl;
