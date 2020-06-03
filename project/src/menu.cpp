@@ -25,8 +25,8 @@ void inicjalizuj_lacze(PzG::LaczeDoGNUPlota & Lacze)
     Lacze.UstawRotacjeXZ(75,80);
 
     Lacze.UstawZakresZ(-110,10);
-    Lacze.UstawZakresX(0,70);
-    Lacze.UstawZakresY(0,70);
+    Lacze.UstawZakresX(0,120);
+    Lacze.UstawZakresY(0,120);
 
     Lacze.DodajNazwePliku("dat/scena.dat");
 }
@@ -39,7 +39,7 @@ bool menu()
     PzG::LaczeDoGNUPlota Lacze;
     inicjalizuj_lacze(Lacze);
 
-    Scena scena = Scena(0,70,0,70);
+    Scena scena = Scena(0,100,0,100);
 
     while(znak!='k')
     {
@@ -73,8 +73,8 @@ bool menu()
                     Lacze.UstawZakresY(scena()[Y]-OTOCZENIE_DRONA,scena()[Y]+OTOCZENIE_DRONA);
                     scena.generuj_dno_woda(scena()[X]-OTOCZENIE_DRONA,scena()[X]+OTOCZENIE_DRONA,scena()[Y]-OTOCZENIE_DRONA,scena()[Y]+OTOCZENIE_DRONA);
                     scena().ruch_przod_kat(1,kat);
-                    scena()(PRAWY).obrot_prawa(1);
-                    scena()(LEWY).obrot_lewa(1);
+                    scena()(PRAWY).obrot_prawa(5);
+                    scena()(LEWY).obrot_lewa(5);
                     scena().translacja_glob();
                     if(!scena.zapisz_plik(Plik))
                     {
@@ -109,12 +109,12 @@ bool menu()
                     if(kat>0)
                     {
                         scena().obrot_kat (1);
-                        scena()(PRAWY).obrot_prawa(1);
+                        scena()(PRAWY).obrot_prawa(5);
                     }
                     else
                     {
                         scena().obrot_kat (-1);
-                        scena()(LEWY).obrot_lewa(1);
+                        scena()(LEWY).obrot_lewa(5);
                     }
                     scena().translacja_glob();
                     if(!scena.zapisz_plik(Plik))

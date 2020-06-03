@@ -7,7 +7,7 @@
 #define Y 1
 #define Z 2
 #define KROK_SIATKI 5
-#define OTOCZENIE_DRONA 35
+#define OTOCZENIE_DRONA 60
 #define LEWY 1
 #define PRAWY 2
 

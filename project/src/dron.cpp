@@ -32,50 +32,28 @@ void Dron::translacja_glob()
             tablica_glob.push_back(temp);
             //std::cout << tablica_glob[i] << std::endl;
         }
-        if(obrot[Z]>0)
+        kat_rad = (wir_prawy[4]/180) * (M_PI);
+        Macierz3D mac_obrot_wir = Macierz3D(Wektor3D(cos(kat_rad),0,sin(kat_rad)),Wektor3D(0,1,0),Wektor3D(-sin(kat_rad),0,cos(kat_rad)));
+        for(int i=0; i<(wir_prawy.uk_lok().size()); i++)
         {
-            kat_rad = (wir_prawy[4]/180) * (M_PI);
-            Macierz3D mac_obrot_wir = Macierz3D(Wektor3D(cos(kat_rad),0,sin(kat_rad)),Wektor3D(0,1,0),Wektor3D(-sin(kat_rad),0,cos(kat_rad)));
-            for(int i=0; i<(wir_prawy.uk_lok().size()); i++)
-            {
-                temp = translacja + mac_obrot*(wir_prawy.translacja() + mac_obrot_wir*wir_prawy.uk_lok()[i]);
-                //std::cout << temp << std::endl;
-                wir_prawy.uk_glob().push_back(temp);
-                //std::cout << tablica_glob[i] << std::endl;
-            }
-            for(int i=0; i<(wir_lewy.uk_lok().size()); i++)
-            {
-                temp = translacja + mac_obrot*(wir_lewy.translacja() + wir_lewy.uk_lok()[i]);
-                //std::cout << temp << std::endl;
-                wir_lewy.uk_glob().push_back(temp);
-                //std::cout << tablica_glob[i] << std::endl;
-            }
+            temp = translacja + mac_obrot*(wir_prawy.translacja() + mac_obrot_wir*wir_prawy.uk_lok()[i]);
+            //std::cout << temp << std::endl;
+            wir_prawy.uk_glob().push_back(temp);
+            //std::cout << tablica_glob[i] << std::endl;
         }
-        else
+        for(int i=0; i<(wir_lewy.uk_lok().size()); i++)
         {
-            kat_rad = (wir_lewy[4]/180) * (M_PI);
-            Macierz3D mac_obrot_wir = Macierz3D(Wektor3D(cos(kat_rad),0,sin(kat_rad)),Wektor3D(0,1,0),Wektor3D(-sin(kat_rad),0,cos(kat_rad)));
-            for(int i=0; i<(wir_prawy.uk_lok().size()); i++)
-            {
-                temp = translacja + mac_obrot*(wir_prawy.translacja() + wir_prawy.uk_lok()[i]);
-                //std::cout << temp << std::endl;
-                wir_prawy.uk_glob().push_back(temp);
-                //std::cout << tablica_glob[i] << std::endl;
-            }
-            for(int i=0; i<(wir_lewy.uk_lok().size()); i++)
-            {
-                temp = translacja + mac_obrot*(wir_lewy.translacja() + mac_obrot_wir*wir_lewy.uk_lok()[i]);
-                //std::cout << temp << std::endl;
-                wir_lewy.uk_glob().push_back(temp);
-                //std::cout << tablica_glob[i] << std::endl;
-            }
+            temp = translacja + mac_obrot*(wir_lewy.translacja() + mac_obrot_wir*wir_lewy.uk_lok()[i]);
+            //std::cout << temp << std::endl;
+            wir_lewy.uk_glob().push_back(temp);
+            //std::cout << tablica_glob[i] << std::endl;
         }
     }
     else
     {    
         for(int i=0; i<(tablica.size()); i++)
         {
-            if(translacja[Z]+tablica[i][Z]>POZ_WOD)
+            if(translacja[Z]+tablica[i][Z]>(POZ_WOD-5))
             {
                 tablica_glob.push_back(Wektor3D(translacja[X]+tablica[i][X],translacja[Y]+tablica[i][Y],POZ_WOD+1));
             }
