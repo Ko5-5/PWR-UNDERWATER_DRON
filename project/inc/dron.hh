@@ -2,6 +2,7 @@
 #define DRON_HH
 
 #include <cmath>
+#include <ostream>
 #include <fstream>
 #include "figura_geo.hh"
 #include "macierz3D.hh"
