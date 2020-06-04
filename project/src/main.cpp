@@ -1,11 +1,13 @@
 #include <iostream>
 #include "menu.hh"
 
+
 int main()
 {
   menu();
   return 0;
 }
+
 /*
 int main()
 {
@@ -17,7 +19,7 @@ int main()
   Lacze.ZmienTrybRys(PzG::TR_3D);
 
   Lacze.UstawRotacjeXZ(75,80);
-  Lacze.UstawZakresZ(-30,30);
+  Lacze.UstawZakresZ(-70,70);
 
   ofstream Plik;
 
@@ -26,10 +28,10 @@ int main()
 
   Dron dron = Dron(Plik_dron);
 
-  Lacze.UstawZakresX(-10,10);
-  Lacze.UstawZakresY(-10,10);
+  Lacze.UstawZakresX(-70,70);
+  Lacze.UstawZakresY(-70,70);
 
-  Lacze.DodajNazwePliku("bryly/dron-lok.dat");
+  Lacze.DodajNazwePliku("bryly/przeszkoda-plaszczyzna.dat");
   Lacze.Rysuj();
 
   for(int i=0; i<60; i++)

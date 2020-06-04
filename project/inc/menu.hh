@@ -3,11 +3,11 @@
 
 #include <iomanip>
 #include <fstream>
-#include <ostream>
 #include <cstdlib>
 #include <cmath>
 #include <unistd.h>
 #include <memory>
+#include <ctime>
 #include "lacze_do_gnuplota.hh"
 #include "scena.hh"
 #include "dron.hh"

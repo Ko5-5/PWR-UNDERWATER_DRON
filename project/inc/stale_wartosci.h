@@ -16,5 +16,10 @@
 #define KOLIZJA_PRZESZKODA 3
 #define DRON 0 
 #define PRZESZKODY 1
+#define PRZESZ_PROS_1 "przeszkoda-prostopadloscian-1.dat"
+#define PRZESZ_PROS_2 "przeszkoda-prostopadloscian-2.dat"
+#define PRZESZ_PROS_3 "przeszkoda-prostopadloscian-3.dat"
+#define PRZESZ_PROSTA "przeszkoda-prosta.dat"
+#define PRZESZ_PLASZ "przeszkoda-plaszczyzna.dat"
 
 #endif

@@ -71,6 +71,7 @@ class Dron : public Figura_geo
 
     Wirnik operator () (unsigned int size) const {if(size==LEWY) return wir_lewy; else return wir_prawy;}
 
+    Wektor3D translacja_wek() {return translacja;}
     /**
      * \brief Realizuje translacje ukladu lokalnego do globalnego
      **/

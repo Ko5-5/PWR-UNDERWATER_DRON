@@ -10,12 +10,31 @@ Scena::Scena(int x_0, int x, int y_0, int y)
     plik_wej.close();
 }
 
-void Scena::generuj_dno_woda(int x_0, int x, int y_0, int y)
+void Scena::generuj_dno_woda()
 {
     delete dno_obj;
     delete woda_obj;
-    dno_obj = new Dno(x_0,x,y_0,y); 
-    woda_obj = new Woda(x_0,x,y_0,y);
+    dno_obj = new Dno(dron_obj[X]-OTOCZENIE_DRONA,dron_obj[X]+OTOCZENIE_DRONA,dron_obj[Y]-OTOCZENIE_DRONA,dron_obj[X]+OTOCZENIE_DRONA); 
+    woda_obj = new Woda(dron_obj[X]-OTOCZENIE_DRONA,dron_obj[X]+OTOCZENIE_DRONA,dron_obj[Y]-OTOCZENIE_DRONA,dron_obj[X]+OTOCZENIE_DRONA);
+}
+
+int Scena::generuj_przeszkody()
+{
+    while(tab_przeszkod.size()<5)
+    {
+        tab_przeszkod.push_back(Przeszkoda(dron_obj.translacja_wek()));
+    }
+    for(Przeszkoda temp : tab_przeszkod)
+    {
+        if(temp.czy_w_zakresie(dron_obj.translacja_wek()))
+        {
+            tab_przeszkod.remove(temp);
+        }
+    }
+    while(tab_przeszkod.size()<5)
+    {
+        tab_przeszkod.push_back(Przeszkoda(dron_obj.translacja_wek()));
+    }
 }
 
 int Scena::czy_kolizja()
@@ -68,6 +87,17 @@ bool Scena::zapisz_plik(std::ofstream & plik_wyj)
         wynik = false;
         std::cerr << "Blad zapisu obiektu dron do pliku" << std::endl;
     }
+    for(Przeszkoda temp : tab_przeszkod)
+    {
+        plik_wyj << temp;
+        if (plik_wyj.fail())
+        {
+            wynik = false;
+            std::cerr << "Blad zapisu przeszkody do pliku" << std::endl;
+        }
+    }
+
+
     
     return wynik;
 }

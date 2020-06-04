@@ -6,6 +6,7 @@
 #include "dno.hh"
 #include "woda.hh"
 #include "dron.hh"
+#include "przeszkoda.hh"
 
 /**
  * \brief Klasa realizujaca pojecie sceny, zawiera w sobie Dno oraz Wode
@@ -16,7 +17,7 @@ class Scena
     Dno * dno_obj;
     Woda * woda_obj;
     Dron dron_obj;
-    std::list<Figura_geo> tab_przeszkod;
+    std::list<Przeszkoda> tab_przeszkod;
 
     public:
     /**
@@ -32,14 +33,16 @@ class Scena
 
     Dron & operator () () {return dron_obj;}
 
-    std::list<Figura_geo> & operator [] (unsigned int size) {return tab_przeszkod;}
+    std::list<Przeszkoda> & operator [] (unsigned int size) {return tab_przeszkod;}
 
     /**
      * \brief Destruktor sceny
      **/
     ~Scena() {delete dno_obj; delete woda_obj;};
 
-    void generuj_dno_woda(int x_0, int x, int y_0, int y);
+    void generuj_dno_woda();
+
+    int generuj_przeszkody();
 
     int czy_kolizja();
 
