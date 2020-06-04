@@ -35,6 +35,7 @@ bool menu()
 {
     char znak = 'm';
     std::ofstream Plik;
+    srand(time(NULL));
 
     PzG::LaczeDoGNUPlota Lacze;
     inicjalizuj_lacze(Lacze);
@@ -74,13 +75,13 @@ bool menu()
                     scena.generuj_dno_woda();
                     scena.generuj_przeszkody();
                     int kolizja;
-                    Scena test_kolizja = Scena(scena);
-                    (test_kolizja)().ruch_przod_kat(1,kat);
-                    (test_kolizja)()(PRAWY).obrot_prawa(5);
-                    (test_kolizja)()(LEWY).obrot_lewa(5);
-                    (test_kolizja)().translacja_glob();
-                    kolizja = (test_kolizja).czy_kolizja();
-                    //delete test_kolizja;
+                    Scena * test_kolizja = new Scena(scena);
+                    (*test_kolizja)().ruch_przod_kat(1,kat);
+                    (*test_kolizja)()(PRAWY).obrot_prawa(5);
+                    (*test_kolizja)()(LEWY).obrot_lewa(5);
+                    (*test_kolizja)().translacja_glob();
+                    kolizja = (*test_kolizja).czy_kolizja();
+                    delete test_kolizja;
                     switch(kolizja)
                     {
                         case BRAK_KOLIZJI:
@@ -94,11 +95,12 @@ bool menu()
                                 cerr << "Blad zapisu sceny do pliku dat" << endl;
                                 return false;
                             }
+                            Lacze.Rysuj();
                             break;
                         }
                         case KOLIZJA_DNO:
                         {
-                            std::cout << "Kolizja z dnem" << std::endl;
+                            std::cout << "---\nKolizja z dnem\n---" << std::endl;
                             break;
                         }
                         case KOLIZJA_WODA:
@@ -112,7 +114,8 @@ bool menu()
                                 cerr << "Blad zapisu sceny do pliku dat" << endl;
                                 return false;
                             }
-                            std::cout << "Maksymalne wynurzenie" << std::endl;
+                            Lacze.Rysuj();
+                            std::cout << "---\nMaksymalne wynurzenie\n---" << std::endl;
                             break;
                         }
                         case KOLIZJA_PRZESZKODA:
@@ -121,7 +124,7 @@ bool menu()
                         }
                     }
                     Plik.close();
-                    Lacze.Rysuj();
+                    if(kolizja!=BRAK_KOLIZJI && kolizja!=KOLIZJA_WODA) break;
                     /*
                     if((scena()[Z]-10) < POZ_DNA)
                     {

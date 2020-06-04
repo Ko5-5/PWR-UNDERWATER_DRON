@@ -14,11 +14,11 @@ void Scena::generuj_dno_woda()
 {
     delete dno_obj;
     delete woda_obj;
-    dno_obj = new Dno(dron_obj[X]-OTOCZENIE_DRONA,dron_obj[X]+OTOCZENIE_DRONA,dron_obj[Y]-OTOCZENIE_DRONA,dron_obj[X]+OTOCZENIE_DRONA); 
-    woda_obj = new Woda(dron_obj[X]-OTOCZENIE_DRONA,dron_obj[X]+OTOCZENIE_DRONA,dron_obj[Y]-OTOCZENIE_DRONA,dron_obj[X]+OTOCZENIE_DRONA);
+    dno_obj = new Dno(dron_obj[X]-OTOCZENIE_DRONA,dron_obj[X]+OTOCZENIE_DRONA,dron_obj[Y]-OTOCZENIE_DRONA,dron_obj[Y]+OTOCZENIE_DRONA); 
+    woda_obj = new Woda(dron_obj[X]-OTOCZENIE_DRONA,dron_obj[X]+OTOCZENIE_DRONA,dron_obj[Y]-OTOCZENIE_DRONA,dron_obj[Y]+OTOCZENIE_DRONA); 
 }
 
-int Scena::generuj_przeszkody()
+void Scena::generuj_przeszkody()
 {
     while(tab_przeszkod.size()<5)
     {

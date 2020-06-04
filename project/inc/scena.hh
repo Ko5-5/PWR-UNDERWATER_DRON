@@ -42,7 +42,7 @@ class Scena
 
     void generuj_dno_woda();
 
-    int generuj_przeszkody();
+    void generuj_przeszkody();
 
     int czy_kolizja();
 

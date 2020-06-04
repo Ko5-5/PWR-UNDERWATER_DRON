@@ -9,26 +9,31 @@ Przeszkoda::Przeszkoda(Wektor3D trans)
         case 1:
         {
             plik_przesz.open(PRZESZ_PROS_1);
+            translacja[Z]=(-110)+15+(std::rand() % 30);
             break;
         }
         case 2:
         {
             plik_przesz.open(PRZESZ_PROS_2);
+            translacja[Z]=(-110)+70+(std::rand() % 10)+1;
             break;
         }
         case 3:
         {
             plik_przesz.open(PRZESZ_PROS_3);
+            translacja[Z]=(-110)+15+(std::rand() % 30)+1;
             break;
         }
         case 4:
         {
             plik_przesz.open(PRZESZ_PLASZ);
+            translacja[Z]=(-110)+60+(std::rand() % 10)+1;
             break;
         }
         case 5:
         {
             plik_przesz.open(PRZESZ_PROSTA);
+            translacja[Z] = (std::rand() % 109 ) - 110;
             break;
         }
     }
@@ -45,22 +50,21 @@ Przeszkoda::Przeszkoda(Wektor3D trans)
     los = ((std::rand() % 2 ) + 1);
     if(los == 1)
     {
-        translacja[X] = (std::rand() % 29 ) + (trans[X]+30);
+        translacja[X] = (std::rand() % 29 ) + (trans[X]+40);
     }
     else
     {
-        translacja[X] = (std::rand() % 29 ) + (trans[X]-30);
+        translacja[X] = (std::rand() % 29 ) + (trans[X]-40);
     }
     los = ((std::rand() % 2 ) + 1);
     if(los == 1)
     {
-        translacja[Y] = (std::rand() % 29 ) + (trans[Y]+30);
+        translacja[Y] = (std::rand() % 29 ) + (trans[Y]+40);
     }
     else
     {
-        translacja[Y] = (std::rand() % 29 ) + (trans[Y]-30);
+        translacja[Y] = (std::rand() % 29 ) + (trans[Y]-40);
     }
-    translacja[Z] = (std::rand() % 109 ) - 110;
 
     for(Wektor3D wek : tablica)
     {
@@ -85,7 +89,7 @@ bool operator == (const Przeszkoda prze1, const Przeszkoda prze2)
 
 std::ostream & operator << (std::ostream & Strm, Przeszkoda & tab)
 {
-    for(int i=1; i<(tab.tablica.size()+1); i++)
+    for(int i=0; i<tab.tablica.size(); i++)
     {
         if(i%4==0)
         {
