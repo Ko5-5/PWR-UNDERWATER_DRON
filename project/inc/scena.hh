@@ -28,7 +28,7 @@ class Scena
      **/
     Scena(int x_0, int x, int y_0, int y);
 
-    Scena(Scena & kopia) {dron_obj = kopia(); tab_przeszkod = kopia[PRZESZKODY];}
+    Scena(Scena & kopia) {dno_obj = new Dno(0,0,0,0), woda_obj = new Woda(0,0,0,0), dron_obj = kopia(); tab_przeszkod = kopia[PRZESZKODY];}
 
     Dron & operator () () {return dron_obj;}
 
