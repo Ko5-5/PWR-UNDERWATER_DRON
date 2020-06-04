@@ -10,5 +10,11 @@
 #define OTOCZENIE_DRONA 60
 #define LEWY 1
 #define PRAWY 2
+#define BRAK_KOLIZJI 0
+#define KOLIZJA_DNO 1
+#define KOLIZJA_WODA 2
+#define KOLIZJA_PRZESZKODA 3
+#define DRON 0 
+#define PRZESZKODY 1
 
 #endif

@@ -72,22 +72,62 @@ bool menu()
                     Lacze.UstawZakresX(scena()[X]-OTOCZENIE_DRONA,scena()[X]+OTOCZENIE_DRONA);
                     Lacze.UstawZakresY(scena()[Y]-OTOCZENIE_DRONA,scena()[Y]+OTOCZENIE_DRONA);
                     scena.generuj_dno_woda(scena()[X]-OTOCZENIE_DRONA,scena()[X]+OTOCZENIE_DRONA,scena()[Y]-OTOCZENIE_DRONA,scena()[Y]+OTOCZENIE_DRONA);
-                    scena().ruch_przod_kat(1,kat);
-                    scena()(PRAWY).obrot_prawa(5);
-                    scena()(LEWY).obrot_lewa(5);
-                    scena().translacja_glob();
-                    if(!scena.zapisz_plik(Plik))
+                    int kolizja;
+                    Scena *test_kolizja = new Scena(scena);
+                    (*test_kolizja)().ruch_przod_kat(1,kat);
+                    (*test_kolizja)()(PRAWY).obrot_prawa(5);
+                    (*test_kolizja)()(LEWY).obrot_lewa(5);
+                    (*test_kolizja)().translacja_glob();
+                    kolizja = (*test_kolizja).czy_kolizja();
+                    delete test_kolizja;
+                    switch(kolizja)
                     {
-                        cerr << "Blad zapisu sceny do pliku dat" << endl;
-                        return 1;
+                        case BRAK_KOLIZJI:
+                        {
+                            scena().ruch_przod_kat(1,kat);
+                            scena()(PRAWY).obrot_prawa(5);
+                            scena()(LEWY).obrot_lewa(5);
+                            scena().translacja_glob();
+                            if(!scena.zapisz_plik(Plik))
+                            {
+                                cerr << "Blad zapisu sceny do pliku dat" << endl;
+                                return false;
+                            }
+                            break;
+                        }
+                        case KOLIZJA_DNO:
+                        {
+                            std::cout << "Kolizja z dnem" << std::endl;
+                            break;
+                        }
+                        case KOLIZJA_WODA:
+                        {
+                            scena().ruch_przod_kat(1,0);
+                            scena()(PRAWY).obrot_prawa(5);
+                            scena()(LEWY).obrot_lewa(5);
+                            scena().translacja_glob();
+                            if(!scena.zapisz_plik(Plik))
+                            {
+                                cerr << "Blad zapisu sceny do pliku dat" << endl;
+                                return false;
+                            }
+                            std::cout << "Maksymalne wynurzenie" << std::endl;
+                            break;
+                        }
+                        case KOLIZJA_PRZESZKODA:
+                        {
+                            std:: cout << "Kolizja z przeszkoda" << std::endl;
+                        }
                     }
                     Plik.close();
                     Lacze.Rysuj();
+                    /*
                     if((scena()[Z]-10) < POZ_DNA)
                     {
                         std::cout << "Dron uderza w dno, koniec programu" << std::endl;
                         exit(-1);
                     }
+                    */
                     usleep(100000);
                 }
                 break;

@@ -2,6 +2,7 @@
 #define SCENA_HH
 
 #include <fstream>
+#include <list>
 #include "dno.hh"
 #include "woda.hh"
 #include "dron.hh"
@@ -15,6 +16,7 @@ class Scena
     Dno * dno_obj;
     Woda * woda_obj;
     Dron dron_obj;
+    std::list<Figura_geo> tab_przeszkod;
 
     public:
     /**
@@ -26,13 +28,20 @@ class Scena
      **/
     Scena(int x_0, int x, int y_0, int y);
 
+    Scena(Scena & kopia) {dron_obj = kopia(); tab_przeszkod = kopia[PRZESZKODY];}
+
     Dron & operator () () {return dron_obj;}
+
+    std::list<Figura_geo> & operator [] (unsigned int size) {return tab_przeszkod;}
+
     /**
      * \brief Destruktor sceny
      **/
     ~Scena() {delete dno_obj; delete woda_obj;};
 
     void generuj_dno_woda(int x_0, int x, int y_0, int y);
+
+    int czy_kolizja();
 
     /**
      * \brief Realizuje zapis sceny do podanego strumienia plikowego

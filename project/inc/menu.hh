@@ -7,6 +7,7 @@
 #include <cstdlib>
 #include <cmath>
 #include <unistd.h>
+#include <memory>
 #include "lacze_do_gnuplota.hh"
 #include "scena.hh"
 #include "dron.hh"

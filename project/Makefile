@@ -1,4 +1,4 @@
-CXXFLAGS=-g -Iinc -Wall -pedantic
+CXXFLAGS=-g -Iinc -Wall -pedantic -std=c++17
 
 TRGDIR=/tmp/rysowanie_3D
 
