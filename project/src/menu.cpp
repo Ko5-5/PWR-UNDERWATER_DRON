@@ -73,13 +73,13 @@ bool menu()
                     Lacze.UstawZakresY(scena()[Y]-OTOCZENIE_DRONA,scena()[Y]+OTOCZENIE_DRONA);
                     scena.generuj_dno_woda(scena()[X]-OTOCZENIE_DRONA,scena()[X]+OTOCZENIE_DRONA,scena()[Y]-OTOCZENIE_DRONA,scena()[Y]+OTOCZENIE_DRONA);
                     int kolizja;
-                    Scena *test_kolizja = new Scena(scena);
-                    (*test_kolizja)().ruch_przod_kat(1,kat);
-                    (*test_kolizja)()(PRAWY).obrot_prawa(5);
-                    (*test_kolizja)()(LEWY).obrot_lewa(5);
-                    (*test_kolizja)().translacja_glob();
-                    kolizja = (*test_kolizja).czy_kolizja();
-                    delete test_kolizja;
+                    Scena test_kolizja = Scena(scena);
+                    (test_kolizja)().ruch_przod_kat(1,kat);
+                    (test_kolizja)()(PRAWY).obrot_prawa(5);
+                    (test_kolizja)()(LEWY).obrot_lewa(5);
+                    (test_kolizja)().translacja_glob();
+                    kolizja = (test_kolizja).czy_kolizja();
+                    //delete test_kolizja;
                     switch(kolizja)
                     {
                         case BRAK_KOLIZJI:
