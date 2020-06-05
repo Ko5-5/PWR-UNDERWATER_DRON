@@ -106,7 +106,6 @@ class Dron : public Figura_geo
 
     /**
      * \brief Realizuje obrot drona wokol osi
-     * \param[in] os - os obrotu
      * \param[in] kat - kat obrotu
      **/
     void obrot_kat(int kat);
