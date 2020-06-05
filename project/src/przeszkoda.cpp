@@ -33,7 +33,7 @@ Przeszkoda::Przeszkoda(Wektor3D trans)
         case 5:
         {
             plik_przesz.open(PRZESZ_PROSTA);
-            translacja[Z] = (std::rand() % 109 ) - 110;
+            translacja[Z] = (std::rand() % 109 ) - 90;
             break;
         }
     }

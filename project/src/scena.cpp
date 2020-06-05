@@ -47,19 +47,121 @@ int Scena::czy_kolizja()
     {
         return KOLIZJA_WODA;
     }
-/*
+
     //Kolizja przeszkody
     Wektor3D rog_gora = dron_obj.maks_wek();
     Wektor3D rog_dol = dron_obj.min_wek();
     Wektor3D temp_gora, temp_dol;
-    for(Przeszkoda przeszkoda : tab_przeszkod)
+    for(Przeszkoda* przeszkoda : tab_przeszkod)
     {
-        temp_gora = przeszkoda.maks_wek();
-        temp_dol = przeszkoda.min_wek();
+        temp_gora = przeszkoda->maks_wek();
+        temp_dol = przeszkoda->min_wek();
 
-        if(rog_gora)
+        //Rog przeszkody w dronie
+        if((temp_gora[X]<rog_gora[X] && temp_gora[X]>rog_dol[X]))
+        {
+            if((temp_gora[Y]<rog_gora[Y] && temp_gora[Y]>rog_dol[Y]))
+            {
+                if((temp_gora[Z]<rog_gora[Z] && temp_gora[Z]>rog_dol[Z]))
+                {
+                    return KOLIZJA_PRZESZKODA;
+                }
+                else if((temp_dol[Z]<rog_gora[Z] && temp_dol[Z]>rog_dol[Z]))
+                {
+                    return KOLIZJA_PRZESZKODA;
+                }
+            }
+            else if((temp_dol[Y]<rog_gora[Y] && temp_dol[Y]>rog_dol[Y]))
+            {
+                if((temp_gora[Z]<rog_gora[Z] && temp_gora[Z]>rog_dol[Z]))
+                {
+                    return KOLIZJA_PRZESZKODA;
+                }
+                else if((temp_dol[Z]<rog_gora[Z] && temp_dol[Z]>rog_dol[Z]))
+                {
+                    return KOLIZJA_PRZESZKODA;
+                }
+            }
+        }
+        else if(temp_dol[X]<rog_gora[X] && temp_dol[X]>rog_dol[X])
+        {
+            if((temp_gora[Y]<rog_gora[Y] && temp_gora[Y]>rog_dol[Y]))
+            {
+                if((temp_gora[Z]<rog_gora[Z] && temp_gora[Z]>rog_dol[Z]))
+                {
+                    return KOLIZJA_PRZESZKODA;
+                }
+                else if((temp_dol[Z]<rog_gora[Z] && temp_dol[Z]>rog_dol[Z]))
+                {
+                    return KOLIZJA_PRZESZKODA;
+                }
+            }
+            else if((temp_dol[Y]<rog_gora[Y] && temp_dol[Y]>rog_dol[Y]))
+            {
+                if((temp_gora[Z]<rog_gora[Z] && temp_gora[Z]>rog_dol[Z]))
+                {
+                    return KOLIZJA_PRZESZKODA;
+                }
+                else if((temp_dol[Z]<rog_gora[Z] && temp_dol[Z]>rog_dol[Z]))
+                {
+                    return KOLIZJA_PRZESZKODA;
+                }
+            }
+        }
+
+        //Rog drona w przeszkodzie
+        if((rog_gora[X]<temp_gora[X] && rog_gora[X]>temp_dol[X]))
+        {
+            if((rog_gora[Y]<temp_gora[Y] && rog_gora[Y]>temp_dol[Y]))
+            {
+                if((rog_gora[Z]<temp_gora[Z] && rog_gora[Z]>temp_dol[Z]))
+                {
+                    return KOLIZJA_PRZESZKODA;
+                }
+                else if((rog_dol[Z]<temp_gora[Z] && rog_dol[Z]>temp_dol[Z]))
+                {
+                    return KOLIZJA_PRZESZKODA;
+                }
+            }
+            else if((rog_dol[Y]<temp_gora[Y] && rog_dol[Y]>temp_dol[Y]))
+            {
+                if((rog_gora[Z]<temp_gora[Z] && rog_gora[Z]>temp_dol[Z]))
+                {
+                    return KOLIZJA_PRZESZKODA;
+                }
+                else if((rog_dol[Z]<temp_gora[Z] && rog_dol[Z]>temp_dol[Z]))
+                {
+                    return KOLIZJA_PRZESZKODA;
+                }
+            }
+        }
+        else if(rog_dol[X]<temp_gora[X] && rog_dol[X]>temp_dol[X])
+        {
+            if((rog_gora[Y]<temp_gora[Y] && rog_gora[Y]>temp_dol[Y]))
+            {
+                if((rog_gora[Z]<temp_gora[Z] && rog_gora[Z]>temp_dol[Z]))
+                {
+                    return KOLIZJA_PRZESZKODA;
+                }
+                else if((rog_dol[Z]<temp_gora[Z] && rog_dol[Z]>temp_dol[Z]))
+                {
+                    return KOLIZJA_PRZESZKODA;
+                }
+            }
+            else if((rog_dol[Y]<temp_gora[Y] && rog_dol[Y]>temp_dol[Y]))
+            {
+                if((rog_gora[Z]<temp_gora[Z] && rog_gora[Z]>temp_dol[Z]))
+                {
+                    return KOLIZJA_PRZESZKODA;
+                }
+                else if((rog_dol[Z]<temp_gora[Z] && rog_dol[Z]>temp_dol[Z]))
+                {
+                    return KOLIZJA_PRZESZKODA;
+                }
+            }
+        }
     }
-*/
+
     return BRAK_KOLIZJI;
 }
 

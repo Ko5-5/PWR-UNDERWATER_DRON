@@ -120,7 +120,7 @@ bool menu()
                         }
                         case KOLIZJA_PRZESZKODA:
                         {
-                            std:: cout << "Kolizja z przeszkoda" << std::endl;
+                            std:: cout << "---\nKolizja z przeszkoda\n---" << std::endl;
                         }
                     }
                     Plik.close();
