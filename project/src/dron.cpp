@@ -3,14 +3,12 @@
 void Dron::ruch_przod_kat(int il_krok, double kat)
 {
     double kat_rad = (kat/180) * (M_PI);
+    double kat_rad_obrot = (obrot[Z]/180) * (M_PI);
 
     translacja[Z] += il_krok * sin(kat_rad);
 
-    translacja[X] += (il_krok * cos(kat_rad))*(-sin(obrot[Z]));
-    translacja[Y] += (il_krok * cos(kat_rad))*(cos(obrot[Z]));
-
-
-    
+    translacja[X] += (il_krok * cos(kat_rad))*(-sin(kat_rad_obrot));
+    translacja[Y] += (il_krok * cos(kat_rad))*(cos(kat_rad_obrot));
 }
 
 void Dron::translacja_glob()
