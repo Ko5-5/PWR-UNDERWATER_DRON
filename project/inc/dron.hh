@@ -22,10 +22,15 @@ class Dron : public Figura_geo
      * \brief Pole obrotu drona wzgledem oryginalnego polozenia
      **/
     Wektor3D obrot = Wektor3D(0,0,0);
-
+    /** 
+     * \brief Pola wirnikow drona
+     **/
     Wirnik wir_prawy, wir_lewy;
 
     public:
+    /**
+     * \brief Konstruktor bezparametryczny klasy Dron
+     **/
     Dron():Figura_geo() {};
 
     /**
@@ -67,11 +72,26 @@ class Dron : public Figura_geo
      **/
     double operator [] (unsigned int size) const {return translacja[size];}
 
+    /**
+     * \brief Przeciazenie operatora () pozwalajace na dostep do wirnikow drona
+     * \param[in] size - nr wirnika
+     * \return Objekt wirnika
+     **/
     Wirnik & operator () (unsigned int size) {if(size==LEWY) return wir_lewy; else return wir_prawy;}
 
+    /**
+     * \brief Przeciazenie operatora () pozwalajace na dostep do wirnikow drona
+     * \param[in] size - nr wirnika
+     * \return Objekt wirnika
+     **/
     Wirnik operator () (unsigned int size) const {if(size==LEWY) return wir_lewy; else return wir_prawy;}
 
+    /**
+     * \brief Pozwala na dostep do wektora translacji drona
+     * \return Wektor translacji drona
+     **/
     Wektor3D translacja_wek() {return translacja;}
+
     /**
      * \brief Realizuje translacje ukladu lokalnego do globalnego
      **/
@@ -93,6 +113,11 @@ class Dron : public Figura_geo
 
 };
 
+/**
+ * \brief Przeciazenie wypisania drona na strumien wyjsciowy
+ * \param[in] strm - strumien wyjsciowy
+ * \return Strumien wyjsciowy
+ **/
 std::ostream & operator << (std::ostream & strm, Dron & tab);
 
 #endif

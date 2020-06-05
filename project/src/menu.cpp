@@ -132,7 +132,7 @@ bool menu()
                         exit(-1);
                     }
                     */
-                    usleep(100000);
+                    usleep(50000);
                 }
                 break;
             }
@@ -168,7 +168,7 @@ bool menu()
                     }
                     Plik.close();
                     Lacze.Rysuj();
-                    usleep(100000);
+                    usleep(50000);
                 }
                 break;
             }

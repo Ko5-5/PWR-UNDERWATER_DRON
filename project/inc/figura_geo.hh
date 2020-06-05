@@ -10,8 +10,14 @@
 class Figura_geo : public Powierzchnia
 {
     public:
+    /**
+     * \brief Pole tablicy globalnej
+     **/
     std::vector<Wektor3D> tablica_glob;
 
+    /**
+     * \brief Konstruktor bezparametryczny figury gemetrycznej
+     **/
     Figura_geo() {};
 
     /**
@@ -27,7 +33,16 @@ class Figura_geo : public Powierzchnia
      **/
     bool zapisz_plik(std::ostream & plik_wyj); 
 
+    /**
+     * \brief Funkcja zwraca maksywalny wektor figury geometrycznej
+     * \return Maksymalny wektor figury
+     **/
     Wektor3D maks_wek();
+
+    /**
+     * \brief Funkcja zwraca minimalny wektor figury geometrycznej
+     * \return Minimalny wektor figury
+     **/
     Wektor3D min_wek();
 };
 
