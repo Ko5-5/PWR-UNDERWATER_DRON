@@ -116,6 +116,7 @@ class Dron : public Figura_geo
 /**
  * \brief Przeciazenie wypisania drona na strumien wyjsciowy
  * \param[in] strm - strumien wyjsciowy
+ * \param[in] tab - dron do wypisania
  * \return Strumien wyjsciowy
  **/
 std::ostream & operator << (std::ostream & strm, Dron & tab);
