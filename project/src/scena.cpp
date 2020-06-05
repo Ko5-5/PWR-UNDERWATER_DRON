@@ -20,20 +20,20 @@ void Scena::generuj_dno_woda()
 
 void Scena::generuj_przeszkody()
 {
+    std::list<int> test = {1,2,3,4,5,6};
     while(tab_przeszkod.size()<5)
     {
-        tab_przeszkod.push_back(Przeszkoda(dron_obj.translacja_wek()));
+        tab_przeszkod.push_back(std::make_unique<Przeszkoda>(dron_obj.translacja_wek()));
     }
-    for(Przeszkoda temp : tab_przeszkod)
+    auto it=tab_przeszkod.begin();
+    for(int i=0; i<tab_przeszkod.size(); i++)
     {
-        if(temp.czy_w_zakresie(dron_obj.translacja_wek()))
+        if(!tab_przeszkod[i]->czy_w_zakresie(dron_obj.translacja_wek()))
         {
-            tab_przeszkod.remove(temp);
+            tab_przeszkod.erase(it);
+            std::cout << tab_przeszkod.size() << std::endl;
         }
-    }
-    while(tab_przeszkod.size()<5)
-    {
-        tab_przeszkod.push_back(Przeszkoda(dron_obj.translacja_wek()));
+        it++;
     }
 }
 
@@ -50,19 +50,20 @@ int Scena::czy_kolizja()
     {
         return KOLIZJA_WODA;
     }
-    /*
+/*
     //Kolizja przeszkody
-    Wektor3D rog_gora = Wektor3D((*this)()[X]+10, (*this)()[Y]+10, (*this)()[Z]+10);
-    Wektor3D rog_dol = Wektor3D((*this)()[X]-10, (*this)()[Y]-12, (*this)()[Z]-12);
-    for(Figura_geo przeszkoda : tab_przeszkod)
+    Wektor3D rog_gora = dron_obj.maks_wek();
+    Wektor3D rog_dol = dron_obj.min_wek();
+    Wektor3D temp_gora, temp_dol;
+    for(Przeszkoda przeszkoda : tab_przeszkod)
     {
-        for(Wektor3D wektor
-        {
+        temp_gora = przeszkoda.maks_wek();
+        temp_dol = przeszkoda.min_wek();
 
-        }
+        if(rog_gora)
     }
-    */
-   return BRAK_KOLIZJI;
+*/
+    return BRAK_KOLIZJI;
 }
 
 bool Scena::zapisz_plik(std::ofstream & plik_wyj)
@@ -87,9 +88,9 @@ bool Scena::zapisz_plik(std::ofstream & plik_wyj)
         wynik = false;
         std::cerr << "Blad zapisu obiektu dron do pliku" << std::endl;
     }
-    for(Przeszkoda temp : tab_przeszkod)
+    for(int i=0; i<tab_przeszkod.size(); i++)
     {
-        plik_wyj << temp;
+        plik_wyj << (*tab_przeszkod[i]);
         if (plik_wyj.fail())
         {
             wynik = false;

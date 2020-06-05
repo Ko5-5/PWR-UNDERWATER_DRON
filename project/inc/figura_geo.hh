@@ -26,6 +26,9 @@ class Figura_geo : public Powierzchnia
      * \return Wartosc logiczna powodzenia zapisania figury
      **/
     bool zapisz_plik(std::ostream & plik_wyj); 
+
+    Wektor3D maks_wek();
+    Wektor3D min_wek();
 };
 
 #endif

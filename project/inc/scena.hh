@@ -3,6 +3,7 @@
 
 #include <fstream>
 #include <list>
+#include <memory>
 #include "dno.hh"
 #include "woda.hh"
 #include "dron.hh"
@@ -17,7 +18,8 @@ class Scena
     Dno * dno_obj;
     Woda * woda_obj;
     Dron dron_obj;
-    std::list<Przeszkoda> tab_przeszkod;
+    std::vector<std::unique_ptr<Przeszkoda>> tab_przeszkod;
+    int il_przeszkod = 0;
 
     public:
     /**
@@ -33,7 +35,7 @@ class Scena
 
     Dron & operator () () {return dron_obj;}
 
-    std::list<Przeszkoda> & operator [] (unsigned int size) {return tab_przeszkod;}
+    std::vector<std::unique_ptr<Przeszkoda>> & operator [] (unsigned int size) {return tab_przeszkod;}
 
     /**
      * \brief Destruktor sceny
