@@ -56,6 +56,7 @@ bool operator == (const Przeszkoda prze1, const Przeszkoda prze2);
 /**
  * \brief Przeciazenie operatora wypisania przeszkody na strumine wyjsciowy
  * \param[in] Strm - strumien wyjsciowy
+ * \param[in] tab - przeszkoda do wypisania
  * \return Strumien wyjsciowy
  **/
 std::ostream & operator << (std::ostream & Strm, Przeszkoda & tab);
