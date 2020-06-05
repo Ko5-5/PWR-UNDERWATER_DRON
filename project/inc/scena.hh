@@ -18,8 +18,7 @@ class Scena
     Dno * dno_obj;
     Woda * woda_obj;
     Dron dron_obj;
-    std::vector<std::unique_ptr<Przeszkoda>> tab_przeszkod;
-    int il_przeszkod = 0;
+    std::vector<Przeszkoda*> tab_przeszkod;
 
     public:
     /**
@@ -35,7 +34,7 @@ class Scena
 
     Dron & operator () () {return dron_obj;}
 
-    std::vector<std::unique_ptr<Przeszkoda>> & operator [] (unsigned int size) {return tab_przeszkod;}
+    std::vector<Przeszkoda*> & operator [] (unsigned int size) {return tab_przeszkod;}
 
     /**
      * \brief Destruktor sceny
@@ -44,7 +43,7 @@ class Scena
 
     void generuj_dno_woda();
 
-    void generuj_przeszkody();
+    void generuj_przeszkody(int ilosc);
 
     int czy_kolizja();
 

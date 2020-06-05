@@ -73,7 +73,7 @@ bool menu()
                     Lacze.UstawZakresX(scena()[X]-OTOCZENIE_DRONA,scena()[X]+OTOCZENIE_DRONA);
                     Lacze.UstawZakresY(scena()[Y]-OTOCZENIE_DRONA,scena()[Y]+OTOCZENIE_DRONA);
                     scena.generuj_dno_woda();
-                    scena.generuj_przeszkody();
+                    scena.generuj_przeszkody(5);
                     int kolizja;
                     Scena * test_kolizja = new Scena(scena);
                     (*test_kolizja)().ruch_przod_kat(1,kat);

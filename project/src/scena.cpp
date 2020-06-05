@@ -18,22 +18,19 @@ void Scena::generuj_dno_woda()
     woda_obj = new Woda(dron_obj[X]-OTOCZENIE_DRONA,dron_obj[X]+OTOCZENIE_DRONA,dron_obj[Y]-OTOCZENIE_DRONA,dron_obj[Y]+OTOCZENIE_DRONA); 
 }
 
-void Scena::generuj_przeszkody()
+void Scena::generuj_przeszkody(int ilosc)
 {
-    std::list<int> test = {1,2,3,4,5,6};
-    while(tab_przeszkod.size()<5)
+    while(tab_przeszkod.size()<ilosc)
     {
-        tab_przeszkod.push_back(std::make_unique<Przeszkoda>(dron_obj.translacja_wek()));
+        tab_przeszkod.push_back(new Przeszkoda(dron_obj.translacja_wek()));
     }
-    auto it=tab_przeszkod.begin();
     for(int i=0; i<tab_przeszkod.size(); i++)
     {
         if(!tab_przeszkod[i]->czy_w_zakresie(dron_obj.translacja_wek()))
         {
-            tab_przeszkod.erase(it);
-            std::cout << tab_przeszkod.size() << std::endl;
+            delete tab_przeszkod[i];
+            tab_przeszkod[i] = new Przeszkoda(dron_obj.translacja_wek());
         }
-        it++;
     }
 }
 
